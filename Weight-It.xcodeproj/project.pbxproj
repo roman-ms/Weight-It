@@ -7,20 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		663EB04D2B3C0FD100B2DE5C /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663EB04C2B3C0FD100B2DE5C /* CameraService.swift */; };
 		66F6CF9B2B2E4917005D3CC5 /* Weight_ItApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6CF9A2B2E4917005D3CC5 /* Weight_ItApp.swift */; };
 		66F6CF9D2B2E4917005D3CC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6CF9C2B2E4917005D3CC5 /* ContentView.swift */; };
 		66F6CF9F2B2E4917005D3CC5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6CF9E2B2E4917005D3CC5 /* Item.swift */; };
 		66F6CFA12B2E4917005D3CC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66F6CFA02B2E4917005D3CC5 /* Assets.xcassets */; };
 		66F6CFA42B2E4917005D3CC5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66F6CFA32B2E4917005D3CC5 /* Preview Assets.xcassets */; };
+		66F6CFB52B2E65FC005D3CC5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6CFB42B2E65FC005D3CC5 /* HomeView.swift */; };
+		66F6CFB72B2E6608005D3CC5 /* InsightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6CFB62B2E6608005D3CC5 /* InsightView.swift */; };
+		66F6CFB92B2E661B005D3CC5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6CFB82B2E661B005D3CC5 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		663EB04C2B3C0FD100B2DE5C /* CameraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
 		66F6CF972B2E4917005D3CC5 /* Weight-It.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weight-It.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F6CF9A2B2E4917005D3CC5 /* Weight_ItApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weight_ItApp.swift; sourceTree = "<group>"; };
 		66F6CF9C2B2E4917005D3CC5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		66F6CF9E2B2E4917005D3CC5 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		66F6CFA02B2E4917005D3CC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66F6CFA32B2E4917005D3CC5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		66F6CFB42B2E65FC005D3CC5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		66F6CFB62B2E6608005D3CC5 /* InsightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightView.swift; sourceTree = "<group>"; };
+		66F6CFB82B2E661B005D3CC5 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +63,11 @@
 			children = (
 				66F6CF9A2B2E4917005D3CC5 /* Weight_ItApp.swift */,
 				66F6CF9C2B2E4917005D3CC5 /* ContentView.swift */,
+				66F6CFB42B2E65FC005D3CC5 /* HomeView.swift */,
+				66F6CFB62B2E6608005D3CC5 /* InsightView.swift */,
+				66F6CFB82B2E661B005D3CC5 /* SettingsView.swift */,
 				66F6CF9E2B2E4917005D3CC5 /* Item.swift */,
+				663EB04C2B3C0FD100B2DE5C /* CameraService.swift */,
 				66F6CFA02B2E4917005D3CC5 /* Assets.xcassets */,
 				66F6CFA22B2E4917005D3CC5 /* Preview Content */,
 			);
@@ -141,8 +153,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				66F6CF9D2B2E4917005D3CC5 /* ContentView.swift in Sources */,
+				66F6CFB72B2E6608005D3CC5 /* InsightView.swift in Sources */,
+				66F6CFB52B2E65FC005D3CC5 /* HomeView.swift in Sources */,
+				66F6CFB92B2E661B005D3CC5 /* SettingsView.swift in Sources */,
 				66F6CF9F2B2E4917005D3CC5 /* Item.swift in Sources */,
 				66F6CF9B2B2E4917005D3CC5 /* Weight_ItApp.swift in Sources */,
+				663EB04D2B3C0FD100B2DE5C /* CameraService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +294,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Weight-It/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Take Photos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -306,6 +323,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Weight-It/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Take Photos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
