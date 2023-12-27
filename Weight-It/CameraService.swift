@@ -71,4 +71,8 @@ class CameraService {
             }
         }
     }
+    
+    func capturePhoto(with settings: AVCapturePhotoSettings = AVCapturePhotoSettings()){
+        output.capturePhoto(with: settings, delegate: delegate!)
+    }
 }
