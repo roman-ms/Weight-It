@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		663EB04D2B3C0FD100B2DE5C /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663EB04C2B3C0FD100B2DE5C /* CameraService.swift */; };
+		663EB04F2B3CDC3E00B2DE5C /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663EB04E2B3CDC3E00B2DE5C /* CameraView.swift */; };
 		66F6CF9B2B2E4917005D3CC5 /* Weight_ItApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6CF9A2B2E4917005D3CC5 /* Weight_ItApp.swift */; };
 		66F6CF9D2B2E4917005D3CC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6CF9C2B2E4917005D3CC5 /* ContentView.swift */; };
 		66F6CF9F2B2E4917005D3CC5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6CF9E2B2E4917005D3CC5 /* Item.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		663EB04C2B3C0FD100B2DE5C /* CameraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
+		663EB04E2B3CDC3E00B2DE5C /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		66F6CF972B2E4917005D3CC5 /* Weight-It.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weight-It.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F6CF9A2B2E4917005D3CC5 /* Weight_ItApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weight_ItApp.swift; sourceTree = "<group>"; };
 		66F6CF9C2B2E4917005D3CC5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				66F6CFB62B2E6608005D3CC5 /* InsightView.swift */,
 				66F6CFB82B2E661B005D3CC5 /* SettingsView.swift */,
 				66F6CF9E2B2E4917005D3CC5 /* Item.swift */,
+				663EB04E2B3CDC3E00B2DE5C /* CameraView.swift */,
 				663EB04C2B3C0FD100B2DE5C /* CameraService.swift */,
 				66F6CFA02B2E4917005D3CC5 /* Assets.xcassets */,
 				66F6CFA22B2E4917005D3CC5 /* Preview Content */,
@@ -159,6 +162,7 @@
 				66F6CF9F2B2E4917005D3CC5 /* Item.swift in Sources */,
 				66F6CF9B2B2E4917005D3CC5 /* Weight_ItApp.swift in Sources */,
 				663EB04D2B3C0FD100B2DE5C /* CameraService.swift in Sources */,
+				663EB04F2B3CDC3E00B2DE5C /* CameraView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
