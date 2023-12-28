@@ -24,6 +24,7 @@ class CameraService {
     
     func start(delegate: AVCapturePhotoCaptureDelegate, completion: @escaping(Error?) -> ()) {
         self.delegate = delegate
+        checkPermissions(completion: completion)
     }
     
     private func checkPermissions(completion: @escaping(Error?) -> ()){
