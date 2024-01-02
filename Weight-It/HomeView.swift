@@ -15,30 +15,49 @@ struct HomeView: View {
     
     var body: some View {
         ZStack{
-            if capturedImage != nil {
-                Image(uiImage: capturedImage!)
-                    .resizable()
-                    .scaledToFit()
-                    .ignoresSafeArea()
-            } else {
-                Color(UIColor.systemBackground)
-            }
+            Color(UIColor.systemBackground)
             VStack {
-                Button(action: {
-                    isCustomCameraViewPresented.toggle()
-                }, label: {
-                    Image(systemName: "camera.fill")
-                        .font(.largeTitle)
-                        .padding()
-                        .background(Color.black)
-                        .foregroundColor(.white)
-                        .clipShape(Circle())
-                })
-                .padding(.bottom)
-                .sheet(isPresented: $isCustomCameraViewPresented, content: {
-                    CustomCameraVeiw(capturedImage: $capturedImage)
-                })
-
+                Text("Home")
+                Spacer()
+                if capturedImage != nil {
+                    ZStack{
+                        Image(uiImage: capturedImage!)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 500, height: 500)
+                        Button(action: {
+                            isCustomCameraViewPresented.toggle()
+                        }, label: {
+                            Image(systemName: "arrow.triangle.2.circlepath.camera")
+                                .font(.largeTitle)
+                                .padding()
+                                .background(Color.black)
+                                .foregroundColor(.white)
+                                .clipShape(Circle())
+                        })
+                        .padding(.bottom)
+                        .sheet(isPresented: $isCustomCameraViewPresented, content: {
+                            CustomCameraVeiw(capturedImage: $capturedImage)
+                        })
+                    }
+                    
+                } else {
+                    Button(action: {
+                        isCustomCameraViewPresented.toggle()
+                    }, label: {
+                        Image(systemName: "camera.fill")
+                            .font(.largeTitle)
+                            .padding()
+                            .background(Color.black)
+                            .foregroundColor(.white)
+                            .clipShape(Circle())
+                    })
+                    .padding(.bottom)
+                    .sheet(isPresented: $isCustomCameraViewPresented, content: {
+                        CustomCameraVeiw(capturedImage: $capturedImage)
+                    })
+                }
+                Spacer()
             }
         }
     }

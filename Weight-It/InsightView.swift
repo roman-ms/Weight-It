@@ -9,7 +9,10 @@ import Foundation
 import SwiftUI
 struct InsightView: View {
     var body: some View {
-        Text("Insight")
+        VStack {
+            Text("Insight")
+            Spacer()
+        }
     }
 }
 struct InsightView_Previews: PreviewProvider {
