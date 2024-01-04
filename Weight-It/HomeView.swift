@@ -13,11 +13,19 @@ struct HomeView: View {
     @State private var capturedImage: UIImage? = nil
     @State private var isCustomCameraViewPresented = false
     
+    //Cal Bar
+    @State private var progressValue: CGFloat = 50
+    
     var body: some View {
         ZStack{
             Color(UIColor.systemBackground)
             VStack {
-                Text("Home")
+                Text("Today's Caloeries:")
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.horizontal)
+                    .bold()
+                ProgressBar(value: progressValue)
+                    .frame(height: 40)
                 Spacer()
                 if capturedImage != nil {
                     ZStack{
