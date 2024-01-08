@@ -20,6 +20,8 @@ struct HomeView: View {
         ZStack{
             Color(UIColor.systemBackground)
             VStack {
+                Text("Home")
+                    .bold()
                 ProgressBar(value: progressValue)
                     .frame(height: 70)
                 Spacer()

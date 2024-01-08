@@ -50,6 +50,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66F2B7D52B4C708100DB45B7 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				663EB0522B3CE39D00B2DE5C /* CustomCameraVeiw.swift */,
+				663EB04E2B3CDC3E00B2DE5C /* CameraView.swift */,
+				663EB04C2B3C0FD100B2DE5C /* CameraService.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		66F2B7D62B4C70A500DB45B7 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				66F6CF9E2B2E4917005D3CC5 /* Item.swift */,
+				66F6CF9A2B2E4917005D3CC5 /* Weight_ItApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		66F2B7D82B4C70CD00DB45B7 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				66DCD8732B4719AA00B90E4D /* CalBar.swift */,
+				665E7BCB2B4764BE00B70576 /* CaptureImageView.swift */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		66F6CF8E2B2E4917005D3CC5 = {
 			isa = PBXGroup;
 			children = (
@@ -69,17 +97,13 @@
 		66F6CF992B2E4917005D3CC5 /* Weight-It */ = {
 			isa = PBXGroup;
 			children = (
-				66F6CF9A2B2E4917005D3CC5 /* Weight_ItApp.swift */,
-				66F6CF9E2B2E4917005D3CC5 /* Item.swift */,
+				66F2B7D62B4C70A500DB45B7 /* App */,
+				66F2B7D82B4C70CD00DB45B7 /* Assets */,
 				66F6CF9C2B2E4917005D3CC5 /* ContentView.swift */,
 				66F6CFB42B2E65FC005D3CC5 /* HomeView.swift */,
 				66F6CFB62B2E6608005D3CC5 /* InsightView.swift */,
 				66F6CFB82B2E661B005D3CC5 /* SettingsView.swift */,
-				665E7BCB2B4764BE00B70576 /* CaptureImageView.swift */,
-				66DCD8732B4719AA00B90E4D /* CalBar.swift */,
-				663EB04E2B3CDC3E00B2DE5C /* CameraView.swift */,
-				663EB0522B3CE39D00B2DE5C /* CustomCameraVeiw.swift */,
-				663EB04C2B3C0FD100B2DE5C /* CameraService.swift */,
+				66F2B7D52B4C708100DB45B7 /* Camera */,
 				66F6CFA02B2E4917005D3CC5 /* Assets.xcassets */,
 				66F6CFA22B2E4917005D3CC5 /* Preview Content */,
 			);
