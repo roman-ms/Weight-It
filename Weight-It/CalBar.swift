@@ -12,7 +12,7 @@ struct ProgressBar: View {
 
     var body: some View {
         VStack{
-            Text("Today's Caloeries:")
+            Text("Today's Calories:")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal)
                 .bold()
