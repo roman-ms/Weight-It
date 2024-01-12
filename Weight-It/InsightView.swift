@@ -15,7 +15,7 @@ struct InsightItemView: View {
         ZStack(alignment: .leading) {
             RoundedRectangle(cornerRadius: 10)
                 .fill(Color(AppColors.primaryColor))
-                .frame(height: 200)
+                .frame(height: 212)
 
             Text(title)
                 .foregroundColor(.white)
