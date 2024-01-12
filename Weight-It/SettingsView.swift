@@ -14,7 +14,7 @@ struct SettingItemView: View {
     var body: some View {
         ZStack(alignment: .leading) {
             RoundedRectangle(cornerRadius: 10)
-                .fill(Color.blue)
+                .fill(Color(AppColors.primaryColor))
                 .frame(height: 50)
 
             Text(title)
