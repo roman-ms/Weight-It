@@ -16,10 +16,13 @@ struct InsightItemView: View {
             RoundedRectangle(cornerRadius: 10)
                 .fill(Color(AppColors.primaryColor))
                 .frame(height: 212)
-
-            Text(title)
-                .foregroundColor(.white)
-                .padding(.leading, 10) // Adjust the padding as needed
+            VStack{
+                Text(title)
+                    .foregroundColor(.white)
+                    .bold()
+                    .padding(10) // Adjust the padding as needed
+                Spacer()
+            }
         }
     }
 }
@@ -31,9 +34,9 @@ struct InsightView: View {
                 Text("Insights")
                     .bold()
                 VStack(spacing: 10) {
+                    InsightItemView(title: "Trends")
                     InsightItemView(title: "Calories")
                     InsightItemView(title: "Nutrition")
-                    InsightItemView(title: "Calories trend")
                 }
                 .padding()
                 Spacer()
