@@ -54,6 +54,7 @@ struct SettingItemView: View {
                 } else if type == "Bool" {
                     Toggle("", isOn: $hasLunchBox)
                         .padding(10)
+
                 }
                 Spacer()
                     .frame(width: 10)
@@ -72,6 +73,7 @@ struct SettingsView: View {
     @State private var goalsInput = ""
     @State private var otherInput = ""
     @State private var unitsInput = ""
+    @State private var NotificationsInput = ""
     
     var body: some View {
         VStack {
@@ -85,23 +87,23 @@ struct SettingsView: View {
                                 type: "Picker",
                                 pickerOptions: ["None","Male", "Female"],
                                 userInput: $sexInput)
+                SettingItemView(title: "Age:",
+                                type: "Text",
+                                userInput: $ageInput)
                 SettingItemView(title: "Weight:",
                                 type: "Text",
                                 userInput: $weightInput)
                 SettingItemView(title: "Height:",
                                 type: "Text",
                                 userInput: $heightInput)
-                SettingItemView(title: "Age:",
-                                type: "Text",
-                                userInput: $ageInput)
-                SettingItemView(title: "Lifestyle:",
-                                type: "Picker",
-                                pickerOptions: ["None", "Active", "Moderate", "Sedentary"],
-                                userInput: $lifestyleInput)
                 SettingItemView(title: "Goals:",
                                 type: "Picker",
                                 pickerOptions: ["None", "Lose", "Maintain", "Gain"],
                                 userInput: $goalsInput)
+                SettingItemView(title: "Lifestyle:",
+                                type: "Picker",
+                                pickerOptions: ["None", "Active", "Moderate", "Sedentary"],
+                                userInput: $lifestyleInput)
                 HStack{
                 Text("Settings")
                     .bold()
@@ -109,11 +111,17 @@ struct SettingsView: View {
                 }
                 SettingItemView(title: "Lunchbox Connect",
                                 type: "Bool",
-                                pickerOptions: ["None","Male", "Female"],
                                 userInput: $sexInput)
-                SettingItemView(title: "Units:",
+                SettingItemView(title: "Notifications",
+                                type: "Bool",
+                                userInput: $NotificationsInput)
+                SettingItemView(title: "Measurment Units",
                                 type: "Picker",
                                 pickerOptions: ["Kg/Cm", "lbs/inch"],
+                                userInput: $unitsInput)
+                SettingItemView(title: "Time Units",
+                                type: "Picker",
+                                pickerOptions: ["12 hr", "24 hr"],
                                 userInput: $unitsInput)
             }
             .padding()
