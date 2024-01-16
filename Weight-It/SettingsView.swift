@@ -15,6 +15,7 @@ struct SettingItemView: View {
     let type: String
     var pickerOptions: [String]? = nil
     @Binding var userInput: String
+    @State private var hasLunchBox: Bool = false
 
     var body: some View {
         ZStack(alignment: .leading) {
@@ -25,6 +26,7 @@ struct SettingItemView: View {
                 Text(title)
                     .foregroundColor(.white)
                     .padding(.leading, 10) // Adjust the padding as needed
+                    .foregroundColor(.white)
                 Spacer()
                 if type == "Text" {
                     TextField("Enter \(String(title.dropLast()))", text: $userInput)
@@ -49,6 +51,9 @@ struct SettingItemView: View {
                     .frame(width: 150, height: 30)
                     .background(Color.white)
                     .cornerRadius(45.0)
+                } else if type == "Bool" {
+                    Toggle("", isOn: $hasLunchBox)
+                        .padding(10)
                 }
                 Spacer()
                     .frame(width: 10)
@@ -66,21 +71,24 @@ struct SettingsView: View {
     @State private var lifestyleInput = ""
     @State private var goalsInput = ""
     @State private var otherInput = ""
+    @State private var unitsInput = ""
     
     var body: some View {
         VStack {
-            Text("User Profile")
-                .bold()
-
             VStack(spacing: 10) {
-                SettingItemView(title: "Sex:", 
+                HStack{
+                Text("User Profile")
+                    .bold()
+                    Spacer()
+                }
+                SettingItemView(title: "Sex:",
                                 type: "Picker",
                                 pickerOptions: ["None","Male", "Female"],
                                 userInput: $sexInput)
                 SettingItemView(title: "Weight:",
                                 type: "Text",
                                 userInput: $weightInput)
-                SettingItemView(title: "Height:", 
+                SettingItemView(title: "Height:",
                                 type: "Text",
                                 userInput: $heightInput)
                 SettingItemView(title: "Age:",
@@ -94,6 +102,19 @@ struct SettingsView: View {
                                 type: "Picker",
                                 pickerOptions: ["None", "Lose", "Maintain", "Gain"],
                                 userInput: $goalsInput)
+                HStack{
+                Text("Settings")
+                    .bold()
+                    Spacer()
+                }
+                SettingItemView(title: "Lunchbox Connect",
+                                type: "Bool",
+                                pickerOptions: ["None","Male", "Female"],
+                                userInput: $sexInput)
+                SettingItemView(title: "Units:",
+                                type: "Picker",
+                                pickerOptions: ["Kg/Cm", "lbs/inch"],
+                                userInput: $unitsInput)
             }
             .padding()
             Spacer()

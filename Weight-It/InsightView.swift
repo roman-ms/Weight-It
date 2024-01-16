@@ -34,8 +34,6 @@ struct InsightView: View {
                     InsightItemView(title: "Calories")
                     InsightItemView(title: "Nutrition")
                     InsightItemView(title: "Calories trend")
-                    InsightItemView(title: "Health")
-                    InsightItemView(title: "Food distribution")
                 }
                 .padding()
                 Spacer()
