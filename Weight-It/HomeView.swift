@@ -25,8 +25,12 @@ struct HomeView: View {
                 ProgressBar(value: progressValue)
                     .frame(height: 70)
                 Spacer()
-                CaptureImageView(capturedImage: $capturedImage, isCustomCameraViewPresented: $isCustomCameraViewPresented)
-                Spacer()
+                if capturedImage != nil {
+                    NoPicView(capturedImage: $capturedImage, isCustomCameraViewPresented: $isCustomCameraViewPresented)
+                } else {
+                    CaptureImageView(capturedImage: $capturedImage, isCustomCameraViewPresented: $isCustomCameraViewPresented)
+                }
+               Spacer()
             }
         }
     }
