@@ -5,6 +5,7 @@ struct CaptureImageView: View {
     @Binding var capturedImage: UIImage?
     @Binding var isCustomCameraViewPresented: Bool
     
+    //placeholder for photo picker data
     @State private var photosPickerItem: PhotosPickerItem?
 
     var body: some View {

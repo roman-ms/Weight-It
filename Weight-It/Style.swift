@@ -14,6 +14,10 @@ func colorFromRGB(_ red: Double, _ green: Double, _ blue: Double) -> Color {
 struct AppColors {
     static let primaryColor = colorFromRGB(147, 197, 114) // Pistachio color
     static let secondaryColor = colorFromRGB(34, 139, 34) // Example secondary color
+    
+    static let PieColor1 = colorFromRGB(170, 213, 118) // Example secondary color
+    static let PieColor2 = colorFromRGB(115, 169, 66) // Example secondary color
+    static let PieColor3 = colorFromRGB(83, 141, 34) // Example secondary color
 }
 
 struct Fonts {
