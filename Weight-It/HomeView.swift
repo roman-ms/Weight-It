@@ -25,14 +25,15 @@ struct HomeView: View {
                 ProgressBar(value: progressValue)
                     .frame(height: 70)
                 //Need to implement Camera capture view into home screen directly
-                //CustomCameraVeiw(capturedImage: $capturedImage)
-                //    .frame(width: 350, height: 400)
-                //    .cornerRadius(45.0)
-                Spacer()
+                
                 if capturedImage != nil {
-                    NoPicView(capturedImage: $capturedImage, isCustomCameraViewPresented: $isCustomCameraViewPresented)
+                    PicView(capturedImage: $capturedImage, isCustomCameraViewPresented: $isCustomCameraViewPresented)
                 } else {
-                    CaptureImageView(capturedImage: $capturedImage, isCustomCameraViewPresented: $isCustomCameraViewPresented)
+                    CustomCameraVeiw(capturedImage: $capturedImage)
+                        .frame(width: 350, height: 400)
+                        .cornerRadius(45.0)
+                    Spacer()
+                    GalleryButton(capturedImage: $capturedImage, isCustomCameraViewPresented: $isCustomCameraViewPresented)
                 }
                Spacer()
             }
