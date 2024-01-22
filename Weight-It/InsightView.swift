@@ -30,46 +30,7 @@ struct InsightItemView: View {
                         .padding(10) // Adjust the padding as needed
                     Spacer()
                 }
-                HStack{
-                    PieChartView(slices: slices)
-                        .frame(width: 140, height: 140)
-                        .padding(.horizontal, 20)
-                    Spacer()
-                    VStack(alignment: .leading) {
-                        HStack{
-                            Rectangle()
-                                .frame(width: 15, height: 15)
-                                .cornerRadius(45.0)
-                                .foregroundColor(AppColors.PieColor1)
-                            Text("Protein")
-                                .padding(5)
-                                .foregroundColor(.white)
-                                .bold()
-                        }
-                        HStack{
-                            Rectangle()
-                                .frame(width: 15, height: 15)
-                                .cornerRadius(45.0)
-                                .foregroundColor(AppColors.PieColor2)
-                            Text("Protein")
-                                .padding(5)
-                                .foregroundColor(.white)
-                                .bold()
-                        }
-                        HStack{
-                            Rectangle()
-                                .frame(width: 15, height: 15)
-                                .cornerRadius(45.0)
-                                .foregroundColor(AppColors.PieColor3)
-                            Text("Protein")
-                                .padding(5)
-                                .foregroundColor(.white)
-                                .bold()
-                        }
-                    }
-                    Spacer()
-                    Spacer()
-                }
+                PieChartView(slices: slices)
                 Spacer()
             }
         }
