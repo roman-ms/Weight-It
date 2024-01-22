@@ -33,6 +33,15 @@ struct ProgressBar: View {
                 .cornerRadius(45.0)
             }
             .padding(.horizontal) // Adds padding around the progress bar
+            HStack{
+                Text("0")
+                    .padding(.horizontal)
+                    .bold()
+                Spacer()
+                Text("3000")
+                    .padding(.horizontal)
+                    .bold()
+            }
         }
     }
 }
