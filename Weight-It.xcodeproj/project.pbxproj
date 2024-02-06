@@ -14,7 +14,12 @@
 		666FA8FD2B58D69300AD1F61 /* PicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666FA8FC2B58D69300AD1F61 /* PicView.swift */; };
 		668BA8262B5F207700242905 /* ImageCrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668BA8252B5F207700242905 /* ImageCrop.swift */; };
 		668D267F2B4C82DD0063504D /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668D267E2B4C82DD0063504D /* Style.swift */; };
+		66A07AF92B61824600007325 /* SettingsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A07AF82B61824600007325 /* SettingsData.swift */; };
 		66D06B022B5B21D10046600C /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D06B012B5B21D10046600C /* PieChartView.swift */; };
+		66D928AE2B71CD4B005BD0E8 /* SeeFood.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 66D928AD2B71CD4B005BD0E8 /* SeeFood.mlpackage */; };
+		66D928B02B71D10B005BD0E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D928AF2B71D10B005BD0E8 /* ViewController.swift */; };
+		66D928B22B71D120005BD0E8 /* ViewControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D928B12B71D120005BD0E8 /* ViewControllerWrapper.swift */; };
+		66D928B42B71D12E005BD0E8 /* ClassificationResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D928B32B71D12E005BD0E8 /* ClassificationResults.swift */; };
 		66DCD8742B4719AA00B90E4D /* CalBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DCD8732B4719AA00B90E4D /* CalBar.swift */; };
 		66F6CF9B2B2E4917005D3CC5 /* Weight_ItApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6CF9A2B2E4917005D3CC5 /* Weight_ItApp.swift */; };
 		66F6CF9D2B2E4917005D3CC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6CF9C2B2E4917005D3CC5 /* ContentView.swift */; };
@@ -34,7 +39,12 @@
 		666FA8FC2B58D69300AD1F61 /* PicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicView.swift; sourceTree = "<group>"; };
 		668BA8252B5F207700242905 /* ImageCrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCrop.swift; sourceTree = "<group>"; };
 		668D267E2B4C82DD0063504D /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		66A07AF82B61824600007325 /* SettingsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsData.swift; sourceTree = "<group>"; };
 		66D06B012B5B21D10046600C /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
+		66D928AD2B71CD4B005BD0E8 /* SeeFood.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = SeeFood.mlpackage; sourceTree = "<group>"; };
+		66D928AF2B71D10B005BD0E8 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		66D928B12B71D120005BD0E8 /* ViewControllerWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerWrapper.swift; sourceTree = "<group>"; };
+		66D928B32B71D12E005BD0E8 /* ClassificationResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassificationResults.swift; sourceTree = "<group>"; };
 		66DCD8732B4719AA00B90E4D /* CalBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalBar.swift; sourceTree = "<group>"; };
 		66F6CF972B2E4917005D3CC5 /* Weight-It.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weight-It.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F6CF9A2B2E4917005D3CC5 /* Weight_ItApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weight_ItApp.swift; sourceTree = "<group>"; };
@@ -58,6 +68,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		668FC7B22B5F2F2800DDCB79 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				66DCD8732B4719AA00B90E4D /* CalBar.swift */,
+				665E7BCB2B4764BE00B70576 /* GalleryButton.swift */,
+				66D06B012B5B21D10046600C /* PieChartView.swift */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		66A07AF22B617A8900007325 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				66A07AF82B61824600007325 /* SettingsData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		66D928AC2B71CD27005BD0E8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				66D928B32B71D12E005BD0E8 /* ClassificationResults.swift */,
+				66D928B12B71D120005BD0E8 /* ViewControllerWrapper.swift */,
+				66D928AF2B71D10B005BD0E8 /* ViewController.swift */,
+				66D928AD2B71CD4B005BD0E8 /* SeeFood.mlpackage */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		66F2B7D52B4C708100DB45B7 /* Camera */ = {
 			isa = PBXGroup;
 			children = (
@@ -77,16 +116,13 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		66F2B7D82B4C70CD00DB45B7 /* Assets */ = {
+		66F2B7D82B4C70CD00DB45B7 /* Scripts */ = {
 			isa = PBXGroup;
 			children = (
-				66DCD8732B4719AA00B90E4D /* CalBar.swift */,
-				665E7BCB2B4764BE00B70576 /* GalleryButton.swift */,
 				668BA8252B5F207700242905 /* ImageCrop.swift */,
 				666FA8FC2B58D69300AD1F61 /* PicView.swift */,
-				66D06B012B5B21D10046600C /* PieChartView.swift */,
 			);
-			path = Assets;
+			path = Scripts;
 			sourceTree = "<group>";
 		};
 		66F6CF8E2B2E4917005D3CC5 = {
@@ -108,13 +144,16 @@
 		66F6CF992B2E4917005D3CC5 /* Weight-It */ = {
 			isa = PBXGroup;
 			children = (
+				66D928AC2B71CD27005BD0E8 /* Model */,
+				66A07AF22B617A8900007325 /* Data */,
 				66F2B7D62B4C70A500DB45B7 /* App */,
-				66F2B7D82B4C70CD00DB45B7 /* Assets */,
+				668FC7B22B5F2F2800DDCB79 /* Elements */,
+				66F2B7D82B4C70CD00DB45B7 /* Scripts */,
 				66F6CF9C2B2E4917005D3CC5 /* ContentView.swift */,
-				668D267E2B4C82DD0063504D /* Style.swift */,
 				66F6CFB42B2E65FC005D3CC5 /* HomeView.swift */,
 				66F6CFB62B2E6608005D3CC5 /* InsightView.swift */,
 				66F6CFB82B2E661B005D3CC5 /* SettingsView.swift */,
+				668D267E2B4C82DD0063504D /* Style.swift */,
 				66F2B7D52B4C708100DB45B7 /* Camera */,
 				66F6CFA02B2E4917005D3CC5 /* Assets.xcassets */,
 				66F6CFA22B2E4917005D3CC5 /* Preview Content */,
@@ -205,11 +244,16 @@
 				66F6CFB72B2E6608005D3CC5 /* InsightView.swift in Sources */,
 				66F6CFB52B2E65FC005D3CC5 /* HomeView.swift in Sources */,
 				663EB0532B3CE39D00B2DE5C /* CustomCameraVeiw.swift in Sources */,
+				66A07AF92B61824600007325 /* SettingsData.swift in Sources */,
+				66D928B22B71D120005BD0E8 /* ViewControllerWrapper.swift in Sources */,
 				666FA8FD2B58D69300AD1F61 /* PicView.swift in Sources */,
+				66D928AE2B71CD4B005BD0E8 /* SeeFood.mlpackage in Sources */,
 				665E7BCC2B4764BE00B70576 /* GalleryButton.swift in Sources */,
 				66F6CFB92B2E661B005D3CC5 /* SettingsView.swift in Sources */,
 				66F6CF9F2B2E4917005D3CC5 /* Item.swift in Sources */,
+				66D928B42B71D12E005BD0E8 /* ClassificationResults.swift in Sources */,
 				668BA8262B5F207700242905 /* ImageCrop.swift in Sources */,
+				66D928B02B71D10B005BD0E8 /* ViewController.swift in Sources */,
 				668D267F2B4C82DD0063504D /* Style.swift in Sources */,
 				66DCD8742B4719AA00B90E4D /* CalBar.swift in Sources */,
 				66F6CF9B2B2E4917005D3CC5 /* Weight_ItApp.swift in Sources */,

@@ -1,0 +1,6 @@
+{
+  "MLModelVersionStringKey" : "--",
+  "MLModelDescriptionKey" : "This MLModel is based on food 101 database. It supports 150 dishes.",
+  "MLModelAuthorKey" : "--",
+  "MLModelLicenseKey" : "MIT"
+}

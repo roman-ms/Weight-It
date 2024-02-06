@@ -24,7 +24,6 @@ struct HomeView: View {
                     .bold()
                 ProgressBar(value: progressValue)
                     .frame(height: 70)
-                //Need to implement Camera capture view into home screen directly
                 
                 if capturedImage != nil {
                     PicView(capturedImage: $capturedImage, isCustomCameraViewPresented: $isCustomCameraViewPresented)

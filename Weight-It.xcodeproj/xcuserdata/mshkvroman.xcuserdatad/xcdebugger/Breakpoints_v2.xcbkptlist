@@ -68,5 +68,53 @@
             landmarkType = "14">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2526E5D0-E394-47E9-8E2A-7AE12351F02E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weight-It/App/Weight_ItApp.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "Weight_ItApp"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "2526E5D0-E394-47E9-8E2A-7AE12351F02E - 3bbf7c1001261989"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Weight_It.Weight_ItApp.init() -&gt; Weight_It.Weight_ItApp"
+                  moduleName = "Weight-It"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mshkvroman/Desktop/Projects/Weight-It/Weight-It/App/Weight_ItApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "2526E5D0-E394-47E9-8E2A-7AE12351F02E - 74249003abfa0073"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "Weight-It"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mshkvroman/Desktop/Projects/Weight-It/Weight-It/App/Weight_ItApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "8">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
