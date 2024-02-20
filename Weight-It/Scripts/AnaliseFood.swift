@@ -45,12 +45,12 @@ struct PicView: View {
                         }
                     }
                 }, label: {
-                    Image(systemName: "checkmark")
-                        .font(.largeTitle)
-                        .padding()
-                        .background(Color.blue) // Change to your desired color
+                    Text("Analyze") // Changed from Image to Text
+                        .font(.title) // Adjust font size as needed
+                        .padding() // Adjust padding as needed for wider appearance
+                        .background(Color(AppColors.primaryColor)) // Change to your desired color
                         .foregroundColor(.white)
-                        .clipShape(Circle())
+                        .cornerRadius(45) // Optional: Add a corner radius for a rounded rectangle shape
                 })
                 .disabled(isClassifying) // Disable the button while classifying
                 
