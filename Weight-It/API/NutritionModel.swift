@@ -10,5 +10,4 @@ import Foundation
 struct NutritionModel: Codable {
     let calories: Int
     let totalWeight: Double
-    let totalNutrients: [String]
 }

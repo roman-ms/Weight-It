@@ -7,16 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6604351B2B8D07F200B97F17 /* NutritionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660435172B8D07F200B97F17 /* NutritionModel.swift */; };
+		6604351C2B8D07F200B97F17 /* NutritionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660435182B8D07F200B97F17 /* NutritionView.swift */; };
+		6604351D2B8D07F200B97F17 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660435192B8D07F200B97F17 /* NetworkManager.swift */; };
+		6604351E2B8D07F200B97F17 /* NutritionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6604351A2B8D07F200B97F17 /* NutritionViewModel.swift */; };
+		6609109B2B852AE800ED074A /* SettingsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6609109A2B852AE800ED074A /* SettingsData.swift */; };
 		663EB04D2B3C0FD100B2DE5C /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663EB04C2B3C0FD100B2DE5C /* CameraService.swift */; };
 		663EB04F2B3CDC3E00B2DE5C /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663EB04E2B3CDC3E00B2DE5C /* CameraView.swift */; };
 		663EB0532B3CE39D00B2DE5C /* CustomCameraVeiw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663EB0522B3CE39D00B2DE5C /* CustomCameraVeiw.swift */; };
+		664DDA1F2B852A32003A761D /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664DDA1D2B852A32003A761D /* SettingsManager.swift */; };
 		665E7BCC2B4764BE00B70576 /* GalleryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665E7BCB2B4764BE00B70576 /* GalleryButton.swift */; };
 		666FA8FD2B58D69300AD1F61 /* AnaliseFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666FA8FC2B58D69300AD1F61 /* AnaliseFood.swift */; };
 		668381152B852842005B6A11 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668381142B852842005B6A11 /* DataController.swift */; };
 		668381182B852861005B6A11 /* FoodModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 668381162B852861005B6A11 /* FoodModel.xcdatamodeld */; };
 		668BA8262B5F207700242905 /* ImageCrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668BA8252B5F207700242905 /* ImageCrop.swift */; };
 		668D267F2B4C82DD0063504D /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668D267E2B4C82DD0063504D /* Style.swift */; };
-		66A07AF92B61824600007325 /* SettingsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A07AF82B61824600007325 /* SettingsData.swift */; };
 		66D06B022B5B21D10046600C /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D06B012B5B21D10046600C /* PieChartView.swift */; };
 		66D928AE2B71CD4B005BD0E8 /* SeeFood.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 66D928AD2B71CD4B005BD0E8 /* SeeFood.mlpackage */; };
 		66D928B02B71D10B005BD0E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D928AF2B71D10B005BD0E8 /* ViewController.swift */; };
@@ -34,16 +39,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		660435172B8D07F200B97F17 /* NutritionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NutritionModel.swift; sourceTree = "<group>"; };
+		660435182B8D07F200B97F17 /* NutritionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NutritionView.swift; sourceTree = "<group>"; };
+		660435192B8D07F200B97F17 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		6604351A2B8D07F200B97F17 /* NutritionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NutritionViewModel.swift; sourceTree = "<group>"; };
+		6609109A2B852AE800ED074A /* SettingsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsData.swift; sourceTree = "<group>"; };
 		663EB04C2B3C0FD100B2DE5C /* CameraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
 		663EB04E2B3CDC3E00B2DE5C /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		663EB0522B3CE39D00B2DE5C /* CustomCameraVeiw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraVeiw.swift; sourceTree = "<group>"; };
+		664DDA1D2B852A32003A761D /* SettingsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		665E7BCB2B4764BE00B70576 /* GalleryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryButton.swift; sourceTree = "<group>"; };
 		666FA8FC2B58D69300AD1F61 /* AnaliseFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnaliseFood.swift; sourceTree = "<group>"; };
 		668381142B852842005B6A11 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		668381172B852861005B6A11 /* FoodModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodModel.xcdatamodel; sourceTree = "<group>"; };
 		668BA8252B5F207700242905 /* ImageCrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCrop.swift; sourceTree = "<group>"; };
 		668D267E2B4C82DD0063504D /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
-		66A07AF82B61824600007325 /* SettingsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsData.swift; sourceTree = "<group>"; };
 		66D06B012B5B21D10046600C /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
 		66D928AD2B71CD4B005BD0E8 /* SeeFood.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = SeeFood.mlpackage; sourceTree = "<group>"; };
 		66D928AF2B71D10B005BD0E8 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +82,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		660435162B8D07DB00B97F17 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				660435192B8D07F200B97F17 /* NetworkManager.swift */,
+				660435172B8D07F200B97F17 /* NutritionModel.swift */,
+				660435182B8D07F200B97F17 /* NutritionView.swift */,
+				6604351A2B8D07F200B97F17 /* NutritionViewModel.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		668FC7B22B5F2F2800DDCB79 /* Elements */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,9 +106,10 @@
 		66A07AF22B617A8900007325 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				664DDA1D2B852A32003A761D /* SettingsManager.swift */,
 				668381162B852861005B6A11 /* FoodModel.xcdatamodeld */,
 				668381142B852842005B6A11 /* DataController.swift */,
-				66A07AF82B61824600007325 /* SettingsData.swift */,
+				6609109A2B852AE800ED074A /* SettingsData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -150,6 +172,7 @@
 		66F6CF992B2E4917005D3CC5 /* Weight-It */ = {
 			isa = PBXGroup;
 			children = (
+				660435162B8D07DB00B97F17 /* API */,
 				66D928AC2B71CD27005BD0E8 /* Model */,
 				66A07AF22B617A8900007325 /* Data */,
 				66F2B7D62B4C70A500DB45B7 /* App */,
@@ -251,19 +274,24 @@
 				668381182B852861005B6A11 /* FoodModel.xcdatamodeld in Sources */,
 				66F6CFB52B2E65FC005D3CC5 /* HomeView.swift in Sources */,
 				663EB0532B3CE39D00B2DE5C /* CustomCameraVeiw.swift in Sources */,
-				66A07AF92B61824600007325 /* SettingsData.swift in Sources */,
+				664DDA1F2B852A32003A761D /* SettingsManager.swift in Sources */,
 				66D928B22B71D120005BD0E8 /* ViewControllerWrapper.swift in Sources */,
 				668381152B852842005B6A11 /* DataController.swift in Sources */,
+				6604351E2B8D07F200B97F17 /* NutritionViewModel.swift in Sources */,
+				6604351C2B8D07F200B97F17 /* NutritionView.swift in Sources */,
 				666FA8FD2B58D69300AD1F61 /* AnaliseFood.swift in Sources */,
 				66D928AE2B71CD4B005BD0E8 /* SeeFood.mlpackage in Sources */,
 				665E7BCC2B4764BE00B70576 /* GalleryButton.swift in Sources */,
 				66F6CFB92B2E661B005D3CC5 /* SettingsView.swift in Sources */,
 				66F6CF9F2B2E4917005D3CC5 /* Item.swift in Sources */,
+				6609109B2B852AE800ED074A /* SettingsData.swift in Sources */,
+				6604351D2B8D07F200B97F17 /* NetworkManager.swift in Sources */,
 				66D928B42B71D12E005BD0E8 /* ClassificationResults.swift in Sources */,
 				668BA8262B5F207700242905 /* ImageCrop.swift in Sources */,
 				66D928B02B71D10B005BD0E8 /* ViewController.swift in Sources */,
 				668D267F2B4C82DD0063504D /* Style.swift in Sources */,
 				66DCD8742B4719AA00B90E4D /* CalBar.swift in Sources */,
+				6604351B2B8D07F200B97F17 /* NutritionModel.swift in Sources */,
 				66F6CF9B2B2E4917005D3CC5 /* Weight_ItApp.swift in Sources */,
 				663EB04D2B3C0FD100B2DE5C /* CameraService.swift in Sources */,
 				663EB04F2B3CDC3E00B2DE5C /* CameraView.swift in Sources */,
