@@ -19,6 +19,5 @@ struct Weight_ItApp: App {
                 //Inject data into the app so we can access anywhere
                 .environment(\.managedObjectContext, dataController.container.viewContext)
         }
-        .modelContainer(for: Settings.self)
     }
 }
