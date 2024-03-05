@@ -64,65 +64,56 @@ struct SettingItemView: View {
 }
 
 struct SettingsView: View {
-    //User information
-    @State private var sexInput = ""
-    @State private var weightInput = ""
-    @State private var heightInput = ""
-    @State private var ageInput = ""
-    @State private var lifestyleInput = ""
-    @State private var goalsInput = ""
-    @State private var otherInput = ""
-    @State private var unitsInput = ""
-    @State private var NotificationsInput = ""
+    @ObservedObject var userSettings = UserSettings.shared
     
     var body: some View {
         VStack {
             VStack(spacing: 10) {
-                HStack{
-                Text("User Profile")
-                    .bold()
+                HStack {
+                    Text("User Profile")
+                        .bold()
                     Spacer()
                 }
                 SettingItemView(title: "Sex:",
                                 type: "Picker",
-                                pickerOptions: ["None","Male", "Female"],
-                                userInput: $sexInput)
+                                pickerOptions: ["None", "Male", "Female"],
+                                userInput: $userSettings.sexInput)
                 SettingItemView(title: "Age:",
                                 type: "Text",
-                                userInput: $ageInput)
+                                userInput: $userSettings.ageInput)
                 SettingItemView(title: "Weight:",
                                 type: "Text",
-                                userInput: $weightInput)
+                                userInput: $userSettings.weightInput)
                 SettingItemView(title: "Height:",
                                 type: "Text",
-                                userInput: $heightInput)
+                                userInput: $userSettings.heightInput)
                 SettingItemView(title: "Goals:",
                                 type: "Picker",
                                 pickerOptions: ["None", "Lose", "Maintain", "Gain"],
-                                userInput: $goalsInput)
+                                userInput: $userSettings.goalsInput)
                 SettingItemView(title: "Lifestyle:",
                                 type: "Picker",
                                 pickerOptions: ["None", "Active", "Moderate", "Sedentary"],
-                                userInput: $lifestyleInput)
-                HStack{
-                Text("Settings")
-                    .bold()
+                                userInput: $userSettings.lifestyleInput)
+                HStack {
+                    Text("Settings")
+                        .bold()
                     Spacer()
                 }
                 SettingItemView(title: "Lunchbox Connect",
                                 type: "Bool",
-                                userInput: $sexInput)
+                                userInput: .constant(String(userSettings.lunchboxInput))) // This should likely be another Bool property, not the 'sexInput'.
                 SettingItemView(title: "Notifications",
                                 type: "Bool",
-                                userInput: $NotificationsInput)
-                SettingItemView(title: "Measurment Units",
+                                userInput: .constant(String(userSettings.notificationsInput)))
+                SettingItemView(title: "Measurement Units",
                                 type: "Picker",
                                 pickerOptions: ["Kg/Cm", "lbs/inch"],
-                                userInput: $unitsInput)
+                                userInput: $userSettings.unitsInput)
                 SettingItemView(title: "Time Units",
                                 type: "Picker",
                                 pickerOptions: ["12 hr", "24 hr"],
-                                userInput: $unitsInput)
+                                userInput: $userSettings.unitsInput) // This might need a separate binding for time units.
             }
             .padding()
             Spacer()

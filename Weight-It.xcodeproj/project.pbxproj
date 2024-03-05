@@ -16,10 +16,9 @@
 		663EB0532B3CE39D00B2DE5C /* CustomCameraVeiw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663EB0522B3CE39D00B2DE5C /* CustomCameraVeiw.swift */; };
 		665E7BCC2B4764BE00B70576 /* GalleryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665E7BCB2B4764BE00B70576 /* GalleryButton.swift */; };
 		666FA8FD2B58D69300AD1F61 /* AnaliseFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666FA8FC2B58D69300AD1F61 /* AnaliseFood.swift */; };
-		668381152B852842005B6A11 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668381142B852842005B6A11 /* DataController.swift */; };
-		668381182B852861005B6A11 /* FoodModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 668381162B852861005B6A11 /* FoodModel.xcdatamodeld */; };
 		668BA8262B5F207700242905 /* ImageCrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668BA8252B5F207700242905 /* ImageCrop.swift */; };
 		668D267F2B4C82DD0063504D /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668D267E2B4C82DD0063504D /* Style.swift */; };
+		66AE548C2B978ECC00C73F4F /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AE548B2B978ECC00C73F4F /* UserSettings.swift */; };
 		66D06B022B5B21D10046600C /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D06B012B5B21D10046600C /* PieChartView.swift */; };
 		66D928AE2B71CD4B005BD0E8 /* SeeFood.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 66D928AD2B71CD4B005BD0E8 /* SeeFood.mlpackage */; };
 		66D928B02B71D10B005BD0E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D928AF2B71D10B005BD0E8 /* ViewController.swift */; };
@@ -46,10 +45,9 @@
 		663EB0522B3CE39D00B2DE5C /* CustomCameraVeiw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraVeiw.swift; sourceTree = "<group>"; };
 		665E7BCB2B4764BE00B70576 /* GalleryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryButton.swift; sourceTree = "<group>"; };
 		666FA8FC2B58D69300AD1F61 /* AnaliseFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnaliseFood.swift; sourceTree = "<group>"; };
-		668381142B852842005B6A11 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
-		668381172B852861005B6A11 /* FoodModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodModel.xcdatamodel; sourceTree = "<group>"; };
 		668BA8252B5F207700242905 /* ImageCrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCrop.swift; sourceTree = "<group>"; };
 		668D267E2B4C82DD0063504D /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		66AE548B2B978ECC00C73F4F /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		66D06B012B5B21D10046600C /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
 		66D928AD2B71CD4B005BD0E8 /* SeeFood.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = SeeFood.mlpackage; sourceTree = "<group>"; };
 		66D928AF2B71D10B005BD0E8 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,8 +100,7 @@
 		66A07AF22B617A8900007325 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				668381162B852861005B6A11 /* FoodModel.xcdatamodeld */,
-				668381142B852842005B6A11 /* DataController.swift */,
+				66AE548B2B978ECC00C73F4F /* UserSettings.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -265,11 +262,9 @@
 				66D06B022B5B21D10046600C /* PieChartView.swift in Sources */,
 				66F6CF9D2B2E4917005D3CC5 /* ContentView.swift in Sources */,
 				66F6CFB72B2E6608005D3CC5 /* InsightView.swift in Sources */,
-				668381182B852861005B6A11 /* FoodModel.xcdatamodeld in Sources */,
 				66F6CFB52B2E65FC005D3CC5 /* HomeView.swift in Sources */,
 				663EB0532B3CE39D00B2DE5C /* CustomCameraVeiw.swift in Sources */,
 				66D928B22B71D120005BD0E8 /* ViewControllerWrapper.swift in Sources */,
-				668381152B852842005B6A11 /* DataController.swift in Sources */,
 				6604351E2B8D07F200B97F17 /* NutritionViewModel.swift in Sources */,
 				6604351C2B8D07F200B97F17 /* NutritionView.swift in Sources */,
 				666FA8FD2B58D69300AD1F61 /* AnaliseFood.swift in Sources */,
@@ -277,6 +272,7 @@
 				665E7BCC2B4764BE00B70576 /* GalleryButton.swift in Sources */,
 				66F6CFB92B2E661B005D3CC5 /* SettingsView.swift in Sources */,
 				66F6CF9F2B2E4917005D3CC5 /* Item.swift in Sources */,
+				66AE548C2B978ECC00C73F4F /* UserSettings.swift in Sources */,
 				6604351D2B8D07F200B97F17 /* NetworkManager.swift in Sources */,
 				66D928B42B71D12E005BD0E8 /* ClassificationResults.swift in Sources */,
 				668BA8262B5F207700242905 /* ImageCrop.swift in Sources */,
@@ -496,19 +492,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		668381162B852861005B6A11 /* FoodModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				668381172B852861005B6A11 /* FoodModel.xcdatamodel */,
-			);
-			currentVersion = 668381172B852861005B6A11 /* FoodModel.xcdatamodel */;
-			path = FoodModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 66F6CF8F2B2E4917005D3CC5 /* Project object */;
 }
