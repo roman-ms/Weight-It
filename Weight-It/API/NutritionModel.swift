@@ -25,6 +25,29 @@ struct TotalNutrients: Codable {
     let FAMS: NutrientInfo
     let FAPU: NutrientInfo
     let CHOCDF: NutrientInfo
+    let FIBTG: NutrientInfo
+    let SUGAR: NutrientInfo
+    let PROCNT: NutrientInfo
+    let CHOLE: NutrientInfo
+    let NA: NutrientInfo
+    let CA: NutrientInfo
+    let MG: NutrientInfo
+    let K: NutrientInfo
+    let FE: NutrientInfo
+    let ZN: NutrientInfo
+    let P: NutrientInfo
+    let VITA_RAE: NutrientInfo
+    let VITC: NutrientInfo
+    let THIA: NutrientInfo
+    let RIBF: NutrientInfo
+    let NIA: NutrientInfo
+    let VITB6A: NutrientInfo
+    let FOLDFE: NutrientInfo
+    let VITB12: NutrientInfo
+    let VITD: NutrientInfo
+    let TOCPHA: NutrientInfo
+    let VITK1: NutrientInfo
+    let WATER: NutrientInfo
 }
 
 struct NutrientInfo: Codable {
@@ -38,10 +61,28 @@ struct TotalDaily: Codable {
     let ENERC_KCAL: DailyInfo
     let FAT: DailyInfo
     let FASAT: DailyInfo
-    let FATRN: DailyInfo
-    let FAMS: DailyInfo
-    let FAPU: DailyInfo
     let CHOCDF: DailyInfo
+    let FIBTG: DailyInfo
+    let PROCNT: DailyInfo
+    let CHOLE: DailyInfo
+    let NA: DailyInfo
+    let CA: DailyInfo
+    let MG: DailyInfo
+    let K: DailyInfo
+    let FE: DailyInfo
+    let ZN: DailyInfo
+    let P: DailyInfo
+    let VITA_RAE: DailyInfo
+    let VITC: DailyInfo
+    let THIA: DailyInfo
+    let RIBF: DailyInfo
+    let NIA: DailyInfo
+    let VITB6A: DailyInfo
+    let FOLDFE: DailyInfo
+    let VITB12: DailyInfo
+    let VITD: DailyInfo
+    let TOCPHA: DailyInfo
+    let VITK1: DailyInfo
 }
 
 struct DailyInfo: Codable {

@@ -15,11 +15,14 @@ struct NutritionView: View {
                 ScrollView {
                     VStack {
                         Text(searchQuery)
-                        Text("Calories: \(nutritionModel.calories)")
-                        Text("Total Weight: \(nutritionModel.totalWeight, specifier: "%.2f") grams")
-                        // Displaying nutrition information from the nested dictionary
                         Text("Energy (kcal): \(nutritionModel.totalNutrients.ENERC_KCAL.quantity, specifier: "%.2f") \(nutritionModel.totalNutrients.ENERC_KCAL.unit)")
-                        Text("Energy Label: \(nutritionModel.totalNutrients.ENERC_KCAL.label)")
+                        Text("Total Weight: \(nutritionModel.totalWeight, specifier: "%.2f") g")
+                        // Displaying nutrition information from the nested dictionary
+                        Text("Carbohydrate: \(nutritionModel.totalNutrients.CHOCDF.quantity) g")
+                        Text("Fat: \(nutritionModel.totalNutrients.FAT.quantity) g")
+                        Text("Protein: \(nutritionModel.totalNutrients.PROCNT.quantity) g")
+                        Text("Cholesterol: \(nutritionModel.totalNutrients.CHOLE.quantity) mg")
+                        
                     }
                 }
             } else {
