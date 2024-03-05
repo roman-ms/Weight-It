@@ -11,11 +11,9 @@
 		6604351C2B8D07F200B97F17 /* NutritionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660435182B8D07F200B97F17 /* NutritionView.swift */; };
 		6604351D2B8D07F200B97F17 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660435192B8D07F200B97F17 /* NetworkManager.swift */; };
 		6604351E2B8D07F200B97F17 /* NutritionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6604351A2B8D07F200B97F17 /* NutritionViewModel.swift */; };
-		6609109B2B852AE800ED074A /* SettingsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6609109A2B852AE800ED074A /* SettingsData.swift */; };
 		663EB04D2B3C0FD100B2DE5C /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663EB04C2B3C0FD100B2DE5C /* CameraService.swift */; };
 		663EB04F2B3CDC3E00B2DE5C /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663EB04E2B3CDC3E00B2DE5C /* CameraView.swift */; };
 		663EB0532B3CE39D00B2DE5C /* CustomCameraVeiw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663EB0522B3CE39D00B2DE5C /* CustomCameraVeiw.swift */; };
-		664DDA1F2B852A32003A761D /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664DDA1D2B852A32003A761D /* SettingsManager.swift */; };
 		665E7BCC2B4764BE00B70576 /* GalleryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665E7BCB2B4764BE00B70576 /* GalleryButton.swift */; };
 		666FA8FD2B58D69300AD1F61 /* AnaliseFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666FA8FC2B58D69300AD1F61 /* AnaliseFood.swift */; };
 		668381152B852842005B6A11 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668381142B852842005B6A11 /* DataController.swift */; };
@@ -43,11 +41,9 @@
 		660435182B8D07F200B97F17 /* NutritionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NutritionView.swift; sourceTree = "<group>"; };
 		660435192B8D07F200B97F17 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		6604351A2B8D07F200B97F17 /* NutritionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NutritionViewModel.swift; sourceTree = "<group>"; };
-		6609109A2B852AE800ED074A /* SettingsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsData.swift; sourceTree = "<group>"; };
 		663EB04C2B3C0FD100B2DE5C /* CameraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
 		663EB04E2B3CDC3E00B2DE5C /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		663EB0522B3CE39D00B2DE5C /* CustomCameraVeiw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraVeiw.swift; sourceTree = "<group>"; };
-		664DDA1D2B852A32003A761D /* SettingsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		665E7BCB2B4764BE00B70576 /* GalleryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryButton.swift; sourceTree = "<group>"; };
 		666FA8FC2B58D69300AD1F61 /* AnaliseFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnaliseFood.swift; sourceTree = "<group>"; };
 		668381142B852842005B6A11 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
@@ -86,9 +82,9 @@
 			isa = PBXGroup;
 			children = (
 				660435192B8D07F200B97F17 /* NetworkManager.swift */,
-				660435172B8D07F200B97F17 /* NutritionModel.swift */,
 				660435182B8D07F200B97F17 /* NutritionView.swift */,
 				6604351A2B8D07F200B97F17 /* NutritionViewModel.swift */,
+				660435172B8D07F200B97F17 /* NutritionModel.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -106,10 +102,8 @@
 		66A07AF22B617A8900007325 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				664DDA1D2B852A32003A761D /* SettingsManager.swift */,
 				668381162B852861005B6A11 /* FoodModel.xcdatamodeld */,
 				668381142B852842005B6A11 /* DataController.swift */,
-				6609109A2B852AE800ED074A /* SettingsData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -274,7 +268,6 @@
 				668381182B852861005B6A11 /* FoodModel.xcdatamodeld in Sources */,
 				66F6CFB52B2E65FC005D3CC5 /* HomeView.swift in Sources */,
 				663EB0532B3CE39D00B2DE5C /* CustomCameraVeiw.swift in Sources */,
-				664DDA1F2B852A32003A761D /* SettingsManager.swift in Sources */,
 				66D928B22B71D120005BD0E8 /* ViewControllerWrapper.swift in Sources */,
 				668381152B852842005B6A11 /* DataController.swift in Sources */,
 				6604351E2B8D07F200B97F17 /* NutritionViewModel.swift in Sources */,
@@ -284,7 +277,6 @@
 				665E7BCC2B4764BE00B70576 /* GalleryButton.swift in Sources */,
 				66F6CFB92B2E661B005D3CC5 /* SettingsView.swift in Sources */,
 				66F6CF9F2B2E4917005D3CC5 /* Item.swift in Sources */,
-				6609109B2B852AE800ED074A /* SettingsData.swift in Sources */,
 				6604351D2B8D07F200B97F17 /* NetworkManager.swift in Sources */,
 				66D928B42B71D12E005BD0E8 /* ClassificationResults.swift in Sources */,
 				668BA8262B5F207700242905 /* ImageCrop.swift in Sources */,

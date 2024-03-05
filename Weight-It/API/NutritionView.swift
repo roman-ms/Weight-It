@@ -17,6 +17,9 @@ struct NutritionView: View {
                         Text(searchQuery)
                         Text("Calories: \(nutritionModel.calories)")
                         Text("Total Weight: \(nutritionModel.totalWeight, specifier: "%.2f") grams")
+                        // Displaying nutrition information from the nested dictionary
+                        Text("Energy (kcal): \(nutritionModel.totalNutrients.ENERC_KCAL.quantity, specifier: "%.2f") \(nutritionModel.totalNutrients.ENERC_KCAL.unit)")
+                        Text("Energy Label: \(nutritionModel.totalNutrients.ENERC_KCAL.label)")
                     }
                 }
             } else {

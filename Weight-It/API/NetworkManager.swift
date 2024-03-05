@@ -15,6 +15,7 @@ struct NetworkManager {
         urlComponents.queryItems = [
             URLQueryItem(name: "app_id", value: "7d4d9421"),
             URLQueryItem(name: "app_key", value: "11bf777843956c24d4192ca534661441"),
+            URLQueryItem(name: "nutrition-type", value: "logging"),
             URLQueryItem(name: "ingr", value: ingredient)
         ]
         
