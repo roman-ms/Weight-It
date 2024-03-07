@@ -10,10 +10,14 @@ import SwiftData
 
 @main
 struct Weight_ItApp: App {
+    //inject data base
+    @StateObject private var dataController = DataController()
     
     var body: some Scene {
         WindowGroup {
             ContentView()
+            //injetc into our app
+                .environment(\.managedObjectContext, dataController.container.viewContext)
         }
     }
 }

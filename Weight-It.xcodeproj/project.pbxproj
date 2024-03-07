@@ -25,6 +25,8 @@
 		66D928B22B71D120005BD0E8 /* ViewControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D928B12B71D120005BD0E8 /* ViewControllerWrapper.swift */; };
 		66D928B42B71D12E005BD0E8 /* ClassificationResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D928B32B71D12E005BD0E8 /* ClassificationResults.swift */; };
 		66DCD8742B4719AA00B90E4D /* CalBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DCD8732B4719AA00B90E4D /* CalBar.swift */; };
+		66E9D5FE2B9A4C8D0005B97B /* FoodModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 66E9D5FB2B9A4C8D0005B97B /* FoodModel.xcdatamodeld */; };
+		66E9D5FF2B9A4C8D0005B97B /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E9D5FD2B9A4C8D0005B97B /* DataController.swift */; };
 		66F6CF9B2B2E4917005D3CC5 /* Weight_ItApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6CF9A2B2E4917005D3CC5 /* Weight_ItApp.swift */; };
 		66F6CF9D2B2E4917005D3CC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6CF9C2B2E4917005D3CC5 /* ContentView.swift */; };
 		66F6CF9F2B2E4917005D3CC5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6CF9E2B2E4917005D3CC5 /* Item.swift */; };
@@ -54,6 +56,8 @@
 		66D928B12B71D120005BD0E8 /* ViewControllerWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerWrapper.swift; sourceTree = "<group>"; };
 		66D928B32B71D12E005BD0E8 /* ClassificationResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassificationResults.swift; sourceTree = "<group>"; };
 		66DCD8732B4719AA00B90E4D /* CalBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalBar.swift; sourceTree = "<group>"; };
+		66E9D5FC2B9A4C8D0005B97B /* FoodModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodModel.xcdatamodel; sourceTree = "<group>"; };
+		66E9D5FD2B9A4C8D0005B97B /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		66F6CF972B2E4917005D3CC5 /* Weight-It.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weight-It.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F6CF9A2B2E4917005D3CC5 /* Weight_ItApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weight_ItApp.swift; sourceTree = "<group>"; };
 		66F6CF9C2B2E4917005D3CC5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -100,6 +104,7 @@
 		66A07AF22B617A8900007325 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				66E9D5FA2B9A4C810005B97B /* DataModel */,
 				66AE548B2B978ECC00C73F4F /* UserSettings.swift */,
 			);
 			path = Data;
@@ -114,6 +119,15 @@
 				66D928AD2B71CD4B005BD0E8 /* SeeFood.mlpackage */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		66E9D5FA2B9A4C810005B97B /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				66E9D5FD2B9A4C8D0005B97B /* DataController.swift */,
+				66E9D5FB2B9A4C8D0005B97B /* FoodModel.xcdatamodeld */,
+			);
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 		66F2B7D52B4C708100DB45B7 /* Camera */ = {
@@ -270,8 +284,10 @@
 				666FA8FD2B58D69300AD1F61 /* AnaliseFood.swift in Sources */,
 				66D928AE2B71CD4B005BD0E8 /* SeeFood.mlpackage in Sources */,
 				665E7BCC2B4764BE00B70576 /* GalleryButton.swift in Sources */,
+				66E9D5FF2B9A4C8D0005B97B /* DataController.swift in Sources */,
 				66F6CFB92B2E661B005D3CC5 /* SettingsView.swift in Sources */,
 				66F6CF9F2B2E4917005D3CC5 /* Item.swift in Sources */,
+				66E9D5FE2B9A4C8D0005B97B /* FoodModel.xcdatamodeld in Sources */,
 				66AE548C2B978ECC00C73F4F /* UserSettings.swift in Sources */,
 				6604351D2B8D07F200B97F17 /* NetworkManager.swift in Sources */,
 				66D928B42B71D12E005BD0E8 /* ClassificationResults.swift in Sources */,
@@ -492,6 +508,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		66E9D5FB2B9A4C8D0005B97B /* FoodModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				66E9D5FC2B9A4C8D0005B97B /* FoodModel.xcdatamodel */,
+			);
+			currentVersion = 66E9D5FC2B9A4C8D0005B97B /* FoodModel.xcdatamodel */;
+			name = FoodModel.xcdatamodeld;
+			path = "/Users/mshkvroman/Desktop/Projects/Weight-It/Weight-It/Weight-It/Data/DataModel/FoodModel.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 66F6CF8F2B2E4917005D3CC5 /* Project object */;
 }
