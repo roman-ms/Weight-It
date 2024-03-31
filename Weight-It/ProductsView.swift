@@ -29,7 +29,7 @@ struct ProductsView: View {
                                     Text(food.name!)
                                         .bold()
                                     
-                                    Text("\(Int(food.calories))") + Text(" calories").foregroundColor(.red)
+                                    Text("\(Int(food.quantity))") + Text(" quantity").foregroundColor(.red)
                                 }
                                 //Pushes rest fo the elements all th way to the right
                                 Spacer()
@@ -44,11 +44,11 @@ struct ProductsView: View {
                 //So list style covers all the screen
                 .listStyle(.plain)
             }
-            .navigationTitle("iCalories")
+            //.navigationTitle("Weight-It")
             .toolbar{
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        showingAddView.toggle()
+                    NavigationLink {
+                        AddFoodView()
                     } label: {
                         Label("Add Food", systemImage: "plus.circle")
                     }
@@ -56,9 +56,6 @@ struct ProductsView: View {
                 ToolbarItem(placement: .navigationBarLeading) {
                     EditButton()
                 }
-            }
-            .sheet(isPresented: $showingAddView){
-                AddFoodView()
             }
         }
         .navigationViewStyle(.stack)
@@ -79,7 +76,7 @@ struct ProductsView: View {
         var caloriesToday: Double = 0
         for item in food {
             if Calendar.current.isDateInToday(item.date!){
-                caloriesToday += item.calories
+                caloriesToday += item.quantity
             }
         }
         
@@ -89,5 +86,5 @@ struct ProductsView: View {
 
 
 #Preview {
-    ContentView()
+    ProductsView()
 }

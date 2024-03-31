@@ -9,6 +9,7 @@ struct AnaliseFood: View {
     @State private var classificationResult: String?
     @State private var classificationConfidence: String?
     @State private var showNutritionView = false
+    
 
     var body: some View {
         VStack {

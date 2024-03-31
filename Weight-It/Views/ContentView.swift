@@ -15,7 +15,7 @@ struct ContentView: View {
 
     var body: some View {
         TabView {
-            InsightView()
+            ProductsView()
                 .tabItem {
                     Text("Insights")
                     Image(systemName: "chart.pie")

@@ -15,7 +15,7 @@ struct EditFoodView: View {
     var food: FetchedResults<Food>.Element
     
     @State private var name = ""
-    @State private var calories: Double = 0
+    @State private var quantity: Double = 0
     
     var body: some View {
         Form{
@@ -23,18 +23,18 @@ struct EditFoodView: View {
                 TextField("\(food.name!)", text: $name)
                     .onAppear{
                         name = food.name!
-                        calories = food.calories
+                        quantity = food.quantity
                     }
                 VStack{
-                    Text("Calories \(Int(calories))")
-                    Slider(value: $calories, in: 0...1000, step: 10)
+                    Text("Calories \(Int(quantity))")
+                    Slider(value: $quantity, in: 0...1000, step: 10)
                 }
                 .padding()
                 
                 HStack{
                     Spacer()
                     Button("Submit"){
-                        DataController().editFood(food: food, name: name, calories: calories, context: managedObjContext)
+                        DataController().editFood(food: food, name: name, quantity: quantity, context: managedObjContext)
                         dismiss()
                     }
                     Spacer()

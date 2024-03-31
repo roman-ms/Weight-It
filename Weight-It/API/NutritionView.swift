@@ -30,7 +30,7 @@ struct NutritionView: View {
             }
         }
         .padding()
-        // Trigger data load when view appears using the passed classification result
+        .navigationTitle("Nutrition Details")
         .onAppear {
             let modifiedQuery = searchQuery + " 100 grams"
             viewModel.loadNutritionData(for: modifiedQuery)

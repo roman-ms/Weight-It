@@ -30,21 +30,29 @@ class DataController: ObservableObject{
         }
     }
     
-    func addFood(name: String, Calories: Double, context: NSManagedObjectContext ) {
+    func addFood(name: String, quantity: Double, context: NSManagedObjectContext ) {
         let food = Food(context: context)
         food.id = UUID()
         food.date = Date()
         food.name = name
-        food.calories = Calories
+        food.quantity = quantity
+        food.kcal = 0
+        food.carbs = 0
+        food.fat = 0
+        food.protein = 0
         
         //use context to avoid repition of save function
         save(context: context)
     }
     
-    func editFood(food: Food, name: String, calories: Double, context: NSManagedObjectContext){
+    func editFood(food: Food, name: String, quantity: Double, context: NSManagedObjectContext){
         food.date = Date()
         food.name = name
-        food.calories = calories
+        food.quantity = quantity
+        food.kcal = 0
+        food.carbs = 0
+        food.fat = 0
+        food.protein = 0
         
         //use context to avoid repition of save function
         save(context: context)

@@ -28,7 +28,7 @@ struct HomeView: View {
                 if capturedImage != nil {
                     AnaliseFood(capturedImage: $capturedImage, isCustomCameraViewPresented: $isCustomCameraViewPresented)
                 } else {
-                    CustomCameraVeiw(capturedImage: $capturedImage)
+                    CustomCameraView(capturedImage: $capturedImage)
                         .frame(width: 350, height: 400)
                         .cornerRadius(45.0)
                     Spacer()

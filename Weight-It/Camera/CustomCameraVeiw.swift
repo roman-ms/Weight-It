@@ -7,40 +7,44 @@
 
 import SwiftUI
 
-struct CustomCameraVeiw: View {
+struct CustomCameraView: View {
     
     let cameraService = CameraService()
     @Binding var capturedImage: UIImage?
     
-    @Environment(\.presentationMode) private var presentationMode
+    // Use a separate presentation mode for this specific view context.
+    @Environment(\.presentationMode) private var cameraViewPresentationMode
     
     var body: some View {
-        //Will have a camera view and button in the bottom
         ZStack {
             CameraView(cameraService: cameraService) { result in
                 switch result {
                 case .success(let photo):
-                    if let data = photo.fileDataRepresentation(){
+                    if let data = photo.fileDataRepresentation() {
                         capturedImage = UIImage(data: data)
-                        presentationMode.wrappedValue.dismiss()
+                        // Dismiss only the camera view, not the entire sheet stack.
+                        cameraViewPresentationMode.wrappedValue.dismiss()
                     } else {
-                        print("Error: no image data found")
+                        print("Error: No image data found")
                     }
-                case .failure(let err):
-                    print(err.localizedDescription)
+                case .failure(let error):
+                    print(error.localizedDescription)
                 }
             }
-            VStack{
+            VStack {
                 Spacer()
-                Button(action: {
-                    cameraService.capturePhoto()
-                }, label: {
-                    Image(systemName: "circle")
-                        .font(.system(size: 72))
-                        .foregroundColor(.white)
-                })
-                .padding(.bottom)
+                HStack{
+                    Button(action: {
+                        cameraService.capturePhoto()
+                    }, label: {
+                        Image(systemName: "circle")
+                            .font(.system(size: 72))
+                            .foregroundColor(.white)
+                    })
+                    .padding(.bottom)
+                }
             }
         }
     }
 }
+

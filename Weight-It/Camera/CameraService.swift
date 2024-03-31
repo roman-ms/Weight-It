@@ -49,29 +49,45 @@ class CameraService {
     }
     
     private func setupCamera(completion: @escaping (Error?) -> ()){
-        let session = AVCaptureSession()
-        if let device = AVCaptureDevice.default(for: .video){
+        DispatchQueue.global(qos: .userInitiated).async {
+            let session = AVCaptureSession()
+            
+            guard let device = AVCaptureDevice.default(for: .video) else {
+                DispatchQueue.main.async {
+                    completion(NSError(domain: "CameraService", code: -1, userInfo: [NSLocalizedDescriptionKey: "Unable to find a suitable camera device."]))
+                }
+                return
+            }
+
             do {
                 let input = try AVCaptureDeviceInput(device: device)
-                if session.canAddInput(input){
-                    session.addInput(input)
+                
+                DispatchQueue.main.async {
+                    if session.canAddInput(input) {
+                        session.addInput(input)
+                    }
+                    
+                    if session.canAddOutput(self.output) {
+                        session.addOutput(self.output)
+                    }
+                    
+                    self.previewLayer.videoGravity = .resizeAspectFill
+                    self.previewLayer.session = session
+                    
+                    session.startRunning()  // This is now off the main thread
+                    self.session = session
+                    
+                    completion(nil)
                 }
-                
-                if session.canAddOutput(output){
-                    session.addOutput(output)
-                }
-                
-                previewLayer.videoGravity = .resizeAspectFill
-                previewLayer.session = session
-                
-                session.startRunning()
-                self.session = session
                 
             } catch {
-                completion(error)
+                DispatchQueue.main.async {
+                    completion(error)
+                }
             }
         }
     }
+
     
     func capturePhoto(with settings: AVCapturePhotoSettings = AVCapturePhotoSettings()){
         output.capturePhoto(with: settings, delegate: delegate!)
