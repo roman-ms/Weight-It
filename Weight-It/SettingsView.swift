@@ -22,9 +22,14 @@ struct SettingItemView: View {
                 Text(title)
 
                 if type == "Text" {
+                    Spacer()
                     TextField("", text: $userInput)
+                        .frame(width: 100)
+
+                        .cornerRadius(5) // Optionally, add a corner radius for rounded corners
                 }
                 else if type == "Picker" {
+                    Spacer()
                     Picker(selection: $userInput, label: Text("")) {
                             if let options = pickerOptions { // Safely unwrap the optional
                                 ForEach(options, id: \.self) { option in
@@ -35,6 +40,7 @@ struct SettingItemView: View {
                                 Text("No options available").tag("No options")
                             }
                         }
+                    .frame(width: 100)
                 } else if type == "Bool" {
                     Toggle("", isOn: $hasLunchBox)
                 }
@@ -48,6 +54,24 @@ struct SettingsView: View {
     
     var body: some View {
         Form {
+            Section(header: Text("Settings")){
+                SettingItemView(title: "Lunchbox Connect",
+                type: "Bool",
+                userInput: .constant(String(userSettings.lunchboxInput))) // This should likely be another Bool property, not the 'sexInput'.
+                SettingItemView(title: "Notifications",
+                type: "Bool",
+                userInput: .constant(String(userSettings.notificationsInput)))
+                SettingItemView(title: "Measurement Units",
+                type: "Picker",
+                pickerOptions: ["Kg/Cm", "lbs/inch"],
+                userInput: $userSettings.unitsInput)
+                SettingItemView(title: "Time Units",
+                type: "Picker",
+                pickerOptions: ["12 hr", "24 hr"],
+                userInput: $userSettings.unitsInput) // This might need a separate binding for time units.
+            }
+            
+            
             Section(header: Text("User Profile")){
                 SettingItemView(title: "Sex",
                                 type: "Picker",
@@ -72,24 +96,52 @@ struct SettingsView: View {
                                 userInput: $userSettings.lifestyleInput)
             }
             
-            Section(header: Text("Settings")){
-                SettingItemView(title: "Lunchbox Connect",
-                type: "Bool",
-                userInput: .constant(String(userSettings.lunchboxInput))) // This should likely be another Bool property, not the 'sexInput'.
-                SettingItemView(title: "Notifications",
-                type: "Bool",
-                userInput: .constant(String(userSettings.notificationsInput)))
-                SettingItemView(title: "Measurement Units",
-                type: "Picker",
-                pickerOptions: ["Kg/Cm", "lbs/inch"],
-                userInput: $userSettings.unitsInput)
-                SettingItemView(title: "Time Units",
-                type: "Picker",
-                pickerOptions: ["12 hr", "24 hr"],
-                userInput: $userSettings.unitsInput) // This might need a separate binding for time units.
+            
+            // Calculate daily calories and format it as a string
+            let formattedCalories = String(format: "%.2f", calculateDailyCalories())
+
+            // Combine the title and formatted value into one string with a line break
+            let headerText = "Calculated Daily Calories: \n\(formattedCalories)"
+
+            // Use the combined string in a single Text view, aligning it to the center
+            Section(header:
+                Text(headerText)
+                    .frame(maxWidth: .infinity)
+                    .multilineTextAlignment(.center)
+            ) {
+                
             }
         }
     }
+    
+    
+    func calculateDailyCalories() -> Double {
+        guard let age = Double(userSettings.ageInput),
+              let weight = Double(userSettings.weightInput),
+              let height = Double(userSettings.heightInput) else {
+            return 0
+        }
+        
+        var bmr: Double
+        if userSettings.sexInput == "Male" {
+            bmr = 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age)
+        } else {
+            bmr = 447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age)
+        }
+        
+        let activityLevels: [String: Double] = [
+            "Sedentary": 1.2,
+            "Moderate": 1.55,
+            "Active": 1.725
+        ]
+        
+        guard let activityMultiplier = activityLevels[userSettings.lifestyleInput] else {
+            return 0
+        }
+        
+        return bmr * activityMultiplier
+    }
+
 }
 
 #Preview {
