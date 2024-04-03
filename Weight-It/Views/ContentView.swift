@@ -15,12 +15,12 @@ struct ContentView: View {
 
     var body: some View {
         TabView {
-            ProductsView()
+            InsightView()
                 .tabItem {
                     Text("Insights")
                     Image(systemName: "chart.pie")
                 }
-            HomeView()
+            ProductsView()
                 .tabItem {
                     Text("Home")
                     Image(systemName: "house.fill")

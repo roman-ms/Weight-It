@@ -76,7 +76,7 @@
 		66F6CFB42B2E65FC005D3CC5 /* OldHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldHomeView.swift; sourceTree = "<group>"; };
 		66F6CFB62B2E6608005D3CC5 /* InsightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightView.swift; sourceTree = "<group>"; };
 		66F6CFB82B2E661B005D3CC5 /* OldSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldSettingsView.swift; sourceTree = "<group>"; };
-		66FD8B772BBDECB300D39108 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		66FD8B772BBDECB300D39108 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = ../SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +104,7 @@
 		66134CD62B9A51E80077DD82 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				66FD8B772BBDECB300D39108 /* SettingsView.swift */,
 				66F6CF9C2B2E4917005D3CC5 /* ContentView.swift */,
 				664F7FEF2B9A52550011F573 /* ProductsView.swift */,
 				664F7FF22B9A52F70011F573 /* AddFoodView.swift */,
@@ -201,7 +202,6 @@
 		66F6CF992B2E4917005D3CC5 /* Weight-It */ = {
 			isa = PBXGroup;
 			children = (
-				66FD8B772BBDECB300D39108 /* SettingsView.swift */,
 				66FD8B792BBDF1C100D39108 /* Old Views */,
 				66134CD62B9A51E80077DD82 /* Views */,
 				660435162B8D07DB00B97F17 /* API */,
