@@ -19,27 +19,34 @@ struct EditFoodView: View {
     
     var body: some View {
         Form{
-            Section{
-                TextField("\(food.name!)", text: $name)
-                    .onAppear{
-                        name = food.name!
-                        quantity = food.quantity
-                    }
-                VStack{
-                    Text("Calories \(Int(quantity))")
-                    Slider(value: $quantity, in: 0...1000, step: 10)
+            TextField("\(food.name!)", text: $name)
+                .onAppear{
+                    name = food.name!
+                    quantity = food.quantity
                 }
-                .padding()
-                
-                HStack{
-                    Spacer()
-                    Button("Submit"){
-                        DataController().editFood(food: food, name: name, quantity: quantity, context: managedObjContext)
-                        dismiss()
-                    }
-                    Spacer()
+            VStack{
+                Text("Calories \(Int(food.kcal)) - \(Int(quantity)) g")
+                Text("Carbs \(Int(food.carbs))")
+                Text("Fat \(Int(food.fat))")
+                Text("Protein \(Int(food.protein))")
+            }
+            .padding()
+
+            HStack{
+                Spacer()
+                Button("Submit"){
+                    DataController().editFood(food: food, name: name,
+                                              quantity: quantity,
+                                              kcal: food.kcal,
+                                              carbs: food.carbs,
+                                              fat: food.fat,
+                                              protein: food.protein,
+                                              context: managedObjContext)
+                    dismiss()
                 }
+                Spacer()
             }
         }
+        .navigationTitle("Edit Food")
     }
 }

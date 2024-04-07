@@ -10,6 +10,9 @@ struct AddFoodView: View {
     @StateObject private var viewModel = ImageAnalysisViewModel()
     @State private var showNutritionView = false
     @State private var isLoading = false
+    
+    @StateObject private var nutritionViewModel = NutritionViewModel()
+    
 
     var body: some View {
         Form {
@@ -36,10 +39,28 @@ struct AddFoodView: View {
             }
             
             Section {
+                if let nutritionModel = nutritionViewModel.nutritionModel {
+                    ScrollView {
+                        VStack {
+                            Text("\(name)")
+                            Text("Energy (kcal): \(nutritionModel.totalNutrients.ENERC_KCAL.quantity, specifier: "%.2f") \(nutritionModel.totalNutrients.ENERC_KCAL.unit)")
+                            Text("Total Weight: \(nutritionModel.totalWeight, specifier: "%.2f") g")
+                            // Displaying nutrition information from the nested dictionary
+                            Text("Carbohydrate: \(nutritionModel.totalNutrients.CHOCDF.quantity) g")
+                            Text("Fat: \(nutritionModel.totalNutrients.FAT.quantity) g")
+                            Text("Protein: \(nutritionModel.totalNutrients.PROCNT.quantity) g")
+                        }
+                    }
+                }
+            }
+            
+            Section {
                 HStack {
                     Spacer()
                     Button("Analyze") {
                         showNutritionView = true // Trigger the sheet presentation
+                        let combinedString = "\(name) \(quantity) g"
+                        nutritionViewModel.loadNutritionData(for: combinedString)
                     }
                     Spacer()
                 }
@@ -49,13 +70,22 @@ struct AddFoodView: View {
                 HStack {
                     Spacer()
                     Button("Submit") {
-                        DataController().addFood(name: name, quantity: quantity, context: managedObjContext)
-                        dismiss()
+                        if let nutritionModel = nutritionViewModel.nutritionModel {
+                            DataController().addFood(name: name,
+                                                     quantity: quantity,
+                                                     kcal: nutritionModel.totalNutrients.ENERC_KCAL.quantity,
+                                                     carbs: nutritionModel.totalNutrients.CHOCDF.quantity,
+                                                     fat: nutritionModel.totalNutrients.FAT.quantity,
+                                                     protein: nutritionModel.totalNutrients.PROCNT.quantity,
+                                                     context: managedObjContext)
+                            dismiss()
+                        }
                     }
                     Spacer()
                 }
             }
         }
+        .navigationTitle("Add Food")
         .onReceive(viewModel.$classificationResult) { result in
             // Update the name with the classification result
             if let result = result, !result.isEmpty {
@@ -68,7 +98,6 @@ struct AddFoodView: View {
             // Present the NutritionView here
             NutritionView(searchQuery: combinedString)
         }
-        .padding(.top, -30) // Adjust the value as needed
         
         if isLoading { // Conditionally display the loading screen
                         LoadingView() // This could be a custom view or a simple overlay
