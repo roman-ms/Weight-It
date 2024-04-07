@@ -21,8 +21,6 @@ struct NutritionView: View {
                         Text("Carbohydrate: \(nutritionModel.totalNutrients.CHOCDF.quantity) g")
                         Text("Fat: \(nutritionModel.totalNutrients.FAT.quantity) g")
                         Text("Protein: \(nutritionModel.totalNutrients.PROCNT.quantity) g")
-                        Text("Cholesterol: \(nutritionModel.totalNutrients.CHOLE.quantity) mg")
-                        
                     }
                 }
             } else {

@@ -49,9 +49,15 @@ class UserSettings: ObservableObject {
         }
     }
     
-    @Published var unitsInput: String {
+    @Published var tunitsInput: String {
         didSet {
-            UserDefaults.standard.set(unitsInput, forKey: "unitsInput")
+            UserDefaults.standard.set(tunitsInput, forKey: "tunitsInput")
+        }
+    }
+    
+    @Published var wunitsInput: String {
+        didSet {
+            UserDefaults.standard.set(wunitsInput, forKey: "wunitsInput")
         }
     }
     
@@ -68,13 +74,14 @@ class UserSettings: ObservableObject {
     }
 
     init() {
-        self.sexInput = UserDefaults.standard.object(forKey: "sexInput") as? String ?? ""
-        self.weightInput = UserDefaults.standard.object(forKey: "weightInput") as? String ?? ""
-        self.heightInput = UserDefaults.standard.object(forKey: "heightInput") as? String ?? ""
-        self.ageInput = UserDefaults.standard.object(forKey: "ageInput") as? String ?? ""
-        self.lifestyleInput = UserDefaults.standard.object(forKey: "lifestyleInput") as? String ?? ""
-        self.goalsInput = UserDefaults.standard.object(forKey: "goalsInput") as? String ?? ""
-        self.unitsInput = UserDefaults.standard.object(forKey: "unitsInput") as? String ?? "Kg/Cm"
+        self.sexInput = UserDefaults.standard.object(forKey: "sexInput") as? String ?? "Male"
+        self.weightInput = UserDefaults.standard.object(forKey: "weightInput") as? String ?? "92"
+        self.heightInput = UserDefaults.standard.object(forKey: "heightInput") as? String ?? "188"
+        self.ageInput = UserDefaults.standard.object(forKey: "ageInput") as? String ?? "23"
+        self.lifestyleInput = UserDefaults.standard.object(forKey: "lifestyleInput") as? String ?? "Active"
+        self.goalsInput = UserDefaults.standard.object(forKey: "goalsInput") as? String ?? "Maintain"
+        self.tunitsInput = UserDefaults.standard.object(forKey: "tunitsInput") as? String ?? "12 hr"
+        self.wunitsInput = UserDefaults.standard.object(forKey: "wunitsInput") as? String ?? "Kg/Cm"
         self.notificationsInput = UserDefaults.standard.object(forKey: "notificationsInput") as? Bool ?? false
         self.lunchboxInput = UserDefaults.standard.object(forKey: "lunchboxinput") as? Bool ?? false
     }

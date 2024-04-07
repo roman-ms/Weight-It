@@ -23,7 +23,7 @@ struct ProductsView: View {
                     .padding(.horizontal)
                 List {
                     ForEach(food) { food in
-                        NavigationLink(destination: EditFoodView(food:food)) {
+                        NavigationLink(destination: EditFoodView(food: food)) {
                             HStack{
                                 VStack(alignment: .leading, spacing: 6) {
                                     Text(food.name!)
@@ -44,7 +44,7 @@ struct ProductsView: View {
                 //So list style covers all the screen
                 .listStyle(.plain)
             }
-            //.navigationTitle("Weight-It")
+            .navigationTitle("Food")
             .toolbar{
                 ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink {

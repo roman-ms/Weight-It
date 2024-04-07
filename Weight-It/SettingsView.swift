@@ -25,7 +25,6 @@ struct SettingItemView: View {
                     Spacer()
                     TextField("", text: $userInput)
                         .frame(width: 100)
-
                         .cornerRadius(5) // Optionally, add a corner radius for rounded corners
                 }
                 else if type == "Picker" {
@@ -40,7 +39,7 @@ struct SettingItemView: View {
                                 Text("No options available").tag("No options")
                             }
                         }
-                    .frame(width: 100)
+                    .frame(width: 200)
                 } else if type == "Bool" {
                     Toggle("", isOn: $hasLunchBox)
                 }
@@ -56,19 +55,22 @@ struct SettingsView: View {
         Form {
             Section(header: Text("Settings")){
                 SettingItemView(title: "Lunchbox Connect",
-                type: "Bool",
-                userInput: .constant(String(userSettings.lunchboxInput))) // This should likely be another Bool property, not the 'sexInput'.
+                                type: "Bool",
+                                userInput: .constant(String(userSettings.lunchboxInput))) // This should likely be another Bool property, not the 'sexInput'.
                 SettingItemView(title: "Notifications",
-                type: "Bool",
-                userInput: .constant(String(userSettings.notificationsInput)))
-                SettingItemView(title: "Measurement Units",
-                type: "Picker",
-                pickerOptions: ["Kg/Cm", "lbs/inch"],
-                userInput: $userSettings.unitsInput)
-                SettingItemView(title: "Time Units",
-                type: "Picker",
-                pickerOptions: ["12 hr", "24 hr"],
-                userInput: $userSettings.unitsInput) // This might need a separate binding for time units.
+                                type: "Bool",
+                                userInput: .constant(String(userSettings.notificationsInput)))
+            }
+            
+            Section(header: Text("Units")){
+                SettingItemView(title: "Measurement",
+                                type: "Picker",
+                                pickerOptions: ["Kg/Cm", "lbs/inch"],
+                                userInput: $userSettings.wunitsInput)
+                SettingItemView(title: "Time",
+                                type: "Picker",
+                                pickerOptions: ["12 hr", "24 hr"],
+                                userInput: $userSettings.tunitsInput) // This might need a separate binding for time units.
             }
             
             
