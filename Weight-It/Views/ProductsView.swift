@@ -29,7 +29,8 @@ struct ProductsView: View {
                                     Text(food.name!)
                                         .bold()
                                     
-                                    Text("\(Int(food.quantity))") + Text(" quantity").foregroundColor(.red)
+                                    Text("\(Int(food.quantity)) g")
+                                        .foregroundColor(.gray)
                                 }
                                 //Pushes rest fo the elements all th way to the right
                                 Spacer()
@@ -76,7 +77,7 @@ struct ProductsView: View {
         var caloriesToday: Double = 0
         for item in food {
             if Calendar.current.isDateInToday(item.date!){
-                caloriesToday += item.quantity
+                caloriesToday += item.kcal
             }
         }
         

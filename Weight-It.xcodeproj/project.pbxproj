@@ -14,6 +14,7 @@
 		663EB04D2B3C0FD100B2DE5C /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663EB04C2B3C0FD100B2DE5C /* CameraService.swift */; };
 		663EB04F2B3CDC3E00B2DE5C /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663EB04E2B3CDC3E00B2DE5C /* CameraView.swift */; };
 		663EB0532B3CE39D00B2DE5C /* CustomCameraVeiw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663EB0522B3CE39D00B2DE5C /* CustomCameraVeiw.swift */; };
+		6645B28F2BBF496600D0A049 /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6645B28E2BBF496600D0A049 /* BarChart.swift */; };
 		664F7FF02B9A52550011F573 /* ProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664F7FEF2B9A52550011F573 /* ProductsView.swift */; };
 		664F7FF32B9A52F70011F573 /* EditFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664F7FF12B9A52F70011F573 /* EditFoodView.swift */; };
 		664F7FF42B9A52F70011F573 /* AddFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664F7FF22B9A52F70011F573 /* AddFoodView.swift */; };
@@ -23,6 +24,7 @@
 		666FA8FD2B58D69300AD1F61 /* AnaliseFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666FA8FC2B58D69300AD1F61 /* AnaliseFood.swift */; };
 		668D267F2B4C82DD0063504D /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668D267E2B4C82DD0063504D /* Style.swift */; };
 		66AE548C2B978ECC00C73F4F /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AE548B2B978ECC00C73F4F /* UserSettings.swift */; };
+		66B344B62BBF45BB001B8F1C /* DonutChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B344B52BBF45BB001B8F1C /* DonutChart.swift */; };
 		66D06B022B5B21D10046600C /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D06B012B5B21D10046600C /* PieChartView.swift */; };
 		66D928AE2B71CD4B005BD0E8 /* SeeFood.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 66D928AD2B71CD4B005BD0E8 /* SeeFood.mlpackage */; };
 		66D928B02B71D10B005BD0E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D928AF2B71D10B005BD0E8 /* ViewController.swift */; };
@@ -50,6 +52,7 @@
 		663EB04C2B3C0FD100B2DE5C /* CameraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
 		663EB04E2B3CDC3E00B2DE5C /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		663EB0522B3CE39D00B2DE5C /* CustomCameraVeiw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraVeiw.swift; sourceTree = "<group>"; };
+		6645B28E2BBF496600D0A049 /* BarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChart.swift; sourceTree = "<group>"; };
 		664F7FEF2B9A52550011F573 /* ProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsView.swift; sourceTree = "<group>"; };
 		664F7FF12B9A52F70011F573 /* EditFoodView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditFoodView.swift; sourceTree = "<group>"; };
 		664F7FF22B9A52F70011F573 /* AddFoodView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFoodView.swift; sourceTree = "<group>"; };
@@ -59,6 +62,7 @@
 		666FA8FC2B58D69300AD1F61 /* AnaliseFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnaliseFood.swift; sourceTree = "<group>"; };
 		668D267E2B4C82DD0063504D /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		66AE548B2B978ECC00C73F4F /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		66B344B52BBF45BB001B8F1C /* DonutChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutChart.swift; sourceTree = "<group>"; };
 		66D06B012B5B21D10046600C /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
 		66D928AD2B71CD4B005BD0E8 /* SeeFood.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = SeeFood.mlpackage; sourceTree = "<group>"; };
 		66D928AF2B71D10B005BD0E8 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 				66DCD8732B4719AA00B90E4D /* CalBar.swift */,
 				665E7BCB2B4764BE00B70576 /* GalleryButton.swift */,
 				66D06B012B5B21D10046600C /* PieChartView.swift */,
+				66B344B52BBF45BB001B8F1C /* DonutChart.swift */,
+				6645B28E2BBF496600D0A049 /* BarChart.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -311,6 +317,7 @@
 				66F6CFB72B2E6608005D3CC5 /* InsightView.swift in Sources */,
 				664F7FF62B9A530F0011F573 /* TimeFormatting.swift in Sources */,
 				66F6CFB52B2E65FC005D3CC5 /* OldHomeView.swift in Sources */,
+				66B344B62BBF45BB001B8F1C /* DonutChart.swift in Sources */,
 				663EB0532B3CE39D00B2DE5C /* CustomCameraVeiw.swift in Sources */,
 				66D928B22B71D120005BD0E8 /* ViewControllerWrapper.swift in Sources */,
 				6604351E2B8D07F200B97F17 /* NutritionViewModel.swift in Sources */,
@@ -322,6 +329,7 @@
 				66E9D5FF2B9A4C8D0005B97B /* DataController.swift in Sources */,
 				66F6CFB92B2E661B005D3CC5 /* OldSettingsView.swift in Sources */,
 				66F6CF9F2B2E4917005D3CC5 /* Item.swift in Sources */,
+				6645B28F2BBF496600D0A049 /* BarChart.swift in Sources */,
 				66E9D5FE2B9A4C8D0005B97B /* FoodModel.xcdatamodeld in Sources */,
 				66AE548C2B978ECC00C73F4F /* UserSettings.swift in Sources */,
 				6604351D2B8D07F200B97F17 /* NetworkManager.swift in Sources */,

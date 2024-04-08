@@ -1,14 +1,5 @@
 //
-//  PieChartView.swift
-//  Weight-It
-//
-//  Created by Roman Meshkov on 1/19/24.
-//
-
-import SwiftUI
-
-//
-//  PieChart.swift
+//  ChartView.swift
 //  Weight-It
 //
 //  Created by Roman Meshkov on 1/19/24.
@@ -16,77 +7,77 @@ import SwiftUI
 
 import Foundation
 import SwiftUI
+import Charts // If you're using iOS 16 and above, Charts is available.
 
-struct PieSlice: Identifiable {
+// Define your data model
+struct ChartData: Identifiable {
     let id = UUID()
-    let startAngle: Angle
-    let endAngle: Angle
-    let color: Color
+    let parameter: String
+    let value: Double
 }
 
-struct PieChartView: View {
-    var slices: [PieSlice]
+// ViewModel to encapsulate the data handling
+class ChartViewModel: ObservableObject {
+    // Private data variable
+    @Published private(set) var data: [ChartData] = [
+        ChartData(parameter: "Jan", value: 10),
+        ChartData(parameter: "Feb", value: 20),
+        ChartData(parameter: "Mar", value: 15)
+        // Add more data as needed
+    ]
+    
+    // Public method to fetch or update data
+    // This is where you would add methods to manipulate your data,
+    // such as fetching it from a database or an API.
+}
+
+// SwiftUI View for displaying the charts
+struct ChartsView: View {
+    @StateObject private var viewModel = ChartViewModel()
 
     var body: some View {
-        HStack{
-            Spacer()
-            GeometryReader { geometry in
-                ZStack {
-                    ForEach(slices) { slice in
-                        Path { path in
-                            let width = min(geometry.size.width, geometry.size.height)
-                            let height = width
-
-                            let center = CGPoint(x: width / 2, y: height / 2)
-                            path.move(to: center)
-
-                            path.addArc(center: center, radius: width / 2,
-                                        startAngle: slice.startAngle,
-                                        endAngle: slice.endAngle,
-                                        clockwise: false)
+        NavigationView {
+            ScrollView {
+                VStack {
+                    // Line Chart
+                    if #available(iOS 16.0, *) {
+                        Chart {
+                            ForEach(viewModel.data) { item in
+                                LineMark(
+                                    x: .value("Parameter", item.parameter),
+                                    y: .value("Value", item.value)
+                                )
+                            }
                         }
-                        .fill(slice.color)
+                        .frame(height: 200)
+                        .padding()
+                    }
+
+                    // Bar Chart
+                    if #available(iOS 16.0, *) {
+                        Chart {
+                            ForEach(viewModel.data) { item in
+                                BarMark(
+                                    x: .value("Parameter", item.parameter),
+                                    y: .value("Value", item.value)
+                                )
+                            }
+                        }
+                        .frame(height: 200)
+                        .padding()
                     }
                 }
+                .navigationTitle("Charts")
             }
-            .frame(width: 125, height: 125)
-            Spacer()
-            Spacer()
-            VStack(alignment: .leading) {
-                HStack{
-                    Rectangle()
-                        .frame(width: 15, height: 15)
-                        .cornerRadius(45.0)
-                        .foregroundColor(AppColors.PieColor1)
-                    Text("Protein")
-                        .padding(5)
-                        .foregroundColor(.white)
-                        .bold()
-                }
-                HStack{
-                    Rectangle()
-                        .frame(width: 15, height: 15)
-                        .cornerRadius(45.0)
-                        .foregroundColor(AppColors.PieColor2)
-                    Text("Protein")
-                        .padding(5)
-                        .foregroundColor(.white)
-                        .bold()
-                }
-                HStack{
-                    Rectangle()
-                        .frame(width: 15, height: 15)
-                        .cornerRadius(45.0)
-                        .foregroundColor(AppColors.PieColor3)
-                    Text("Protein")
-                        .padding(5)
-                        .foregroundColor(.white)
-                        .bold()
-                }
-            }
-            Spacer()
         }
     }
 }
 
-
+// Entry point for the SwiftUI application
+struct MyApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+    }
+}
