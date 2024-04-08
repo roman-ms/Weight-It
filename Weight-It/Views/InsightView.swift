@@ -9,15 +9,6 @@ import Foundation
 import SwiftUI
 
 struct InsightView: View {
-    let sampleStats = [
-        Stats(city: "Mon", population: 2000, gender: .female),
-        Stats(city: "Tue", population: 3900, gender: .male),
-        Stats(city: "Wed", population: 2700, gender: .notSet),
-        Stats(city: "Thu", population: 2700, gender: .notSet),
-        Stats(city: "Fri", population: 2700, gender: .notSet),
-        Stats(city: "Sat", population: 2700, gender: .notSet),
-        Stats(city: "Sun", population: 2700, gender: .notSet)
-    ]
     
     var body: some View {
         Form{
@@ -31,7 +22,7 @@ struct InsightView: View {
             
             Section(header: Text("Week")){
                 VStack{
-                    BarChart(stats: sampleStats)
+                    WeeklyCaloriesBarChart()
                     
                 }
             }

@@ -14,7 +14,7 @@
 		663EB04D2B3C0FD100B2DE5C /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663EB04C2B3C0FD100B2DE5C /* CameraService.swift */; };
 		663EB04F2B3CDC3E00B2DE5C /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663EB04E2B3CDC3E00B2DE5C /* CameraView.swift */; };
 		663EB0532B3CE39D00B2DE5C /* CustomCameraVeiw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663EB0522B3CE39D00B2DE5C /* CustomCameraVeiw.swift */; };
-		6645B28F2BBF496600D0A049 /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6645B28E2BBF496600D0A049 /* BarChart.swift */; };
+		6645B28F2BBF496600D0A049 /* WeeklyCaloriesBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6645B28E2BBF496600D0A049 /* WeeklyCaloriesBarChart.swift */; };
 		664F7FF02B9A52550011F573 /* ProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664F7FEF2B9A52550011F573 /* ProductsView.swift */; };
 		664F7FF32B9A52F70011F573 /* EditFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664F7FF12B9A52F70011F573 /* EditFoodView.swift */; };
 		664F7FF42B9A52F70011F573 /* AddFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664F7FF22B9A52F70011F573 /* AddFoodView.swift */; };
@@ -52,7 +52,7 @@
 		663EB04C2B3C0FD100B2DE5C /* CameraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
 		663EB04E2B3CDC3E00B2DE5C /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		663EB0522B3CE39D00B2DE5C /* CustomCameraVeiw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraVeiw.swift; sourceTree = "<group>"; };
-		6645B28E2BBF496600D0A049 /* BarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChart.swift; sourceTree = "<group>"; };
+		6645B28E2BBF496600D0A049 /* WeeklyCaloriesBarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyCaloriesBarChart.swift; sourceTree = "<group>"; };
 		664F7FEF2B9A52550011F573 /* ProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsView.swift; sourceTree = "<group>"; };
 		664F7FF12B9A52F70011F573 /* EditFoodView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditFoodView.swift; sourceTree = "<group>"; };
 		664F7FF22B9A52F70011F573 /* AddFoodView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFoodView.swift; sourceTree = "<group>"; };
@@ -126,7 +126,7 @@
 				665E7BCB2B4764BE00B70576 /* GalleryButton.swift */,
 				66D06B012B5B21D10046600C /* PieChartView.swift */,
 				66B344B52BBF45BB001B8F1C /* DonutChart.swift */,
-				6645B28E2BBF496600D0A049 /* BarChart.swift */,
+				6645B28E2BBF496600D0A049 /* WeeklyCaloriesBarChart.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -208,6 +208,8 @@
 		66F6CF992B2E4917005D3CC5 /* Weight-It */ = {
 			isa = PBXGroup;
 			children = (
+				66F6CFA02B2E4917005D3CC5 /* Assets.xcassets */,
+				66F6CFA22B2E4917005D3CC5 /* Preview Content */,
 				66FD8B792BBDF1C100D39108 /* Old Views */,
 				66134CD62B9A51E80077DD82 /* Views */,
 				660435162B8D07DB00B97F17 /* API */,
@@ -217,8 +219,6 @@
 				668FC7B22B5F2F2800DDCB79 /* Elements */,
 				66F2B7D82B4C70CD00DB45B7 /* Scripts */,
 				66F2B7D52B4C708100DB45B7 /* Camera */,
-				66F6CFA02B2E4917005D3CC5 /* Assets.xcassets */,
-				66F6CFA22B2E4917005D3CC5 /* Preview Content */,
 			);
 			path = "Weight-It";
 			sourceTree = "<group>";
@@ -329,7 +329,7 @@
 				66E9D5FF2B9A4C8D0005B97B /* DataController.swift in Sources */,
 				66F6CFB92B2E661B005D3CC5 /* OldSettingsView.swift in Sources */,
 				66F6CF9F2B2E4917005D3CC5 /* Item.swift in Sources */,
-				6645B28F2BBF496600D0A049 /* BarChart.swift in Sources */,
+				6645B28F2BBF496600D0A049 /* WeeklyCaloriesBarChart.swift in Sources */,
 				66E9D5FE2B9A4C8D0005B97B /* FoodModel.xcdatamodeld in Sources */,
 				66AE548C2B978ECC00C73F4F /* UserSettings.swift in Sources */,
 				6604351D2B8D07F200B97F17 /* NetworkManager.swift in Sources */,
