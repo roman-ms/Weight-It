@@ -12,16 +12,56 @@ struct NutritionView: View {
             } else if let errorMessage = viewModel.errorMessage {
                 Text("Error: \(errorMessage)")
             } else if let nutritionModel = viewModel.nutritionModel {
-                ScrollView {
+                NavigationView {
                     VStack {
-                        Text(searchQuery)
-                        Text("Energy (kcal): \(nutritionModel.totalNutrients.ENERC_KCAL.quantity, specifier: "%.2f") \(nutritionModel.totalNutrients.ENERC_KCAL.unit)")
-                        Text("Total Weight: \(nutritionModel.totalWeight, specifier: "%.2f") g")
-                        // Displaying nutrition information from the nested dictionary
-                        Text("Carbohydrate: \(nutritionModel.totalNutrients.CHOCDF.quantity) g")
-                        Text("Fat: \(nutritionModel.totalNutrients.FAT.quantity) g")
-                        Text("Protein: \(nutritionModel.totalNutrients.PROCNT.quantity) g")
+                        SectorChart(products: [
+                            Product(title: "Protein", revenue: nutritionModel.totalNutrients.PROCNT.quantity),
+                            Product(title: "Carbs", revenue: nutritionModel.totalNutrients.CHOCDF.quantity),
+                            Product(title: "Fat", revenue: nutritionModel.totalNutrients.FAT.quantity),
+                            Product(title: "Fiber", revenue: nutritionModel.totalNutrients.PROCNT.quantity),
+                        ])
+
+                        VStack(spacing: 10) { // Increase spacing between lines here, adjust the value as needed
+                            HStack {
+                                Text("Energy (kcal): ")
+                                    .bold() +
+                                Text("\(nutritionModel.totalNutrients.ENERC_KCAL.quantity, specifier: "%.2f") \(nutritionModel.totalNutrients.ENERC_KCAL.unit)")
+                                Spacer()
+                            }
+                            
+                            HStack {
+                                Text("Carbohydrate: ")
+                                    .bold() +
+                                Text("\(nutritionModel.totalNutrients.CHOCDF.quantity) g")
+                                Spacer()
+                            }
+                            
+                            HStack {
+                                Text("Fat: ")
+                                    .bold() +
+                                Text("\(nutritionModel.totalNutrients.FAT.quantity) g")
+                                Spacer()
+                            }
+                            
+                            HStack {
+                                Text("Protein: ")
+                                    .bold() +
+                                Text("\(nutritionModel.totalNutrients.PROCNT.quantity) g")
+                                Spacer()
+                            }
+                            
+                            HStack {
+                                Text("Fiber: ")
+                                    .bold() +
+                                Text("\(nutritionModel.totalNutrients.FIBTG.quantity) g")
+                                Spacer()
+                            }
+                        }
+                        .multilineTextAlignment(.leading)
+                        .padding(.leading, 20)
+                        Spacer()
                     }
+                    .navigationTitle(searchQuery)
                 }
             } else {
                 Text("No data available.")
@@ -30,8 +70,7 @@ struct NutritionView: View {
         .padding()
         .navigationTitle("Nutrition Details")
         .onAppear {
-            let modifiedQuery = searchQuery + " 100 grams"
-            viewModel.loadNutritionData(for: modifiedQuery)
+            viewModel.loadNutritionData(for: searchQuery)
         }
     }
 }
