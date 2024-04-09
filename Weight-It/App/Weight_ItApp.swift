@@ -18,6 +18,7 @@ struct Weight_ItApp: App {
             ContentView()
             //injetc into our app
                 .environment(\.managedObjectContext, dataController.container.viewContext)
+                .accentColor(Color(hex: "00000A"))
         }
     }
 }

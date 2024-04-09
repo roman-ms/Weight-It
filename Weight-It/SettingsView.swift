@@ -17,32 +17,30 @@ struct SettingItemView: View {
     @State private var hasLunchBox: Bool = false
 
     var body: some View {
-        ZStack(alignment: .leading) {
-            HStack{
-                Text(title)
+        HStack{
+            Text(title)
 
-                if type == "Text" {
-                    Spacer()
-                    TextField("", text: $userInput)
-                        .frame(width: 100)
-                        .cornerRadius(5) // Optionally, add a corner radius for rounded corners
-                }
-                else if type == "Picker" {
-                    Spacer()
-                    Picker(selection: $userInput, label: Text("")) {
-                            if let options = pickerOptions { // Safely unwrap the optional
-                                ForEach(options, id: \.self) { option in
-                                    Text(option).tag(option)
-                                }
-                            } else {
-                                // Handle the case where there are no options (e.g., display a default option)
-                                Text("No options available").tag("No options")
+            if type == "Text" {
+                Spacer()
+                TextField("", text: $userInput)
+                    .frame(width: 100)
+                    .cornerRadius(5) // Optionally, add a corner radius for rounded corners
+            }
+            else if type == "Picker" {
+                Spacer()
+                Picker(selection: $userInput, label: Text("")) {
+                        if let options = pickerOptions { // Safely unwrap the optional
+                            ForEach(options, id: \.self) { option in
+                                Text(option).tag(option)
                             }
+                        } else {
+                            // Handle the case where there are no options (e.g., display a default option)
+                            Text("No options available").tag("No options")
                         }
-                    .frame(width: 200)
-                } else if type == "Bool" {
-                    Toggle("", isOn: $hasLunchBox)
-                }
+                    }
+                .frame(width: 200)
+            } else if type == "Bool" {
+                Toggle("", isOn: $hasLunchBox)
             }
         }
     }

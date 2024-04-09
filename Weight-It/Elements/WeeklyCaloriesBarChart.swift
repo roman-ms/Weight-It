@@ -47,13 +47,12 @@ struct WeeklyCaloriesBarChart: View {
 
     var body: some View {
         let data = groupAndSumCaloriesByDayOfWeek()
+        let caloriesGoal = 1500 // Example calories goal
         
         if data.isEmpty {
             // Display "No Data" message for empty data
             ZStack {
-                // Draw an empty grid or background if needed for aesthetics
                 Chart {
-                    // Example of creating an empty grid, you might adjust based on actual needs
                     ForEach(["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], id: \.self) { day in
                         BarMark(
                             x: .value("Day", day),
@@ -62,9 +61,9 @@ struct WeeklyCaloriesBarChart: View {
                         .opacity(0)
                     }
                 }
+                .frame(height: 150)
                 .padding()
                 
-                // Overlay "No Data" message on top of the chart/grid
                 Text("No Data")
                     .foregroundColor(.gray)
                     .font(.title)
@@ -78,10 +77,18 @@ struct WeeklyCaloriesBarChart: View {
                         y: .value("Calories", totalCalories)
                     )
                     .opacity(0.7)
-                    .foregroundStyle(.blue)
+                    .foregroundStyle(Color(hex: "00000A"))
                 }
+                // Add the RuleMark for the calories goal
+                RuleMark(
+                    y: .value("Goal", caloriesGoal)
+                )
+                .lineStyle(StrokeStyle(lineWidth: 2, dash: [5])) // Makes the line dotted
+                .foregroundStyle(.red) // Sets the color to red
             }
+            .frame(height: 150)
             .padding()
         }
     }
+
 }

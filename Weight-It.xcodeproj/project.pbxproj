@@ -26,7 +26,6 @@
 		668D267F2B4C82DD0063504D /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668D267E2B4C82DD0063504D /* Style.swift */; };
 		66AE548C2B978ECC00C73F4F /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AE548B2B978ECC00C73F4F /* UserSettings.swift */; };
 		66B344B62BBF45BB001B8F1C /* SectorChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B344B52BBF45BB001B8F1C /* SectorChart.swift */; };
-		66D06B022B5B21D10046600C /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D06B012B5B21D10046600C /* PieChartView.swift */; };
 		66D928AE2B71CD4B005BD0E8 /* SeeFood.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 66D928AD2B71CD4B005BD0E8 /* SeeFood.mlpackage */; };
 		66D928B02B71D10B005BD0E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D928AF2B71D10B005BD0E8 /* ViewController.swift */; };
 		66D928B22B71D120005BD0E8 /* ViewControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D928B12B71D120005BD0E8 /* ViewControllerWrapper.swift */; };
@@ -63,7 +62,6 @@
 		668D267E2B4C82DD0063504D /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		66AE548B2B978ECC00C73F4F /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		66B344B52BBF45BB001B8F1C /* SectorChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorChart.swift; sourceTree = "<group>"; };
-		66D06B012B5B21D10046600C /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
 		66D928AD2B71CD4B005BD0E8 /* SeeFood.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = SeeFood.mlpackage; sourceTree = "<group>"; };
 		66D928AF2B71D10B005BD0E8 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		66D928B12B71D120005BD0E8 /* ViewControllerWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerWrapper.swift; sourceTree = "<group>"; };
@@ -122,7 +120,6 @@
 				668D267E2B4C82DD0063504D /* Style.swift */,
 				66DCD8732B4719AA00B90E4D /* CalBar.swift */,
 				665E7BCB2B4764BE00B70576 /* GalleryButton.swift */,
-				66D06B012B5B21D10046600C /* PieChartView.swift */,
 				66B344B52BBF45BB001B8F1C /* SectorChart.swift */,
 				6645B28E2BBF496600D0A049 /* WeeklyCaloriesBarChart.swift */,
 			);
@@ -300,7 +297,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				664F7FF02B9A52550011F573 /* ProductsView.swift in Sources */,
-				66D06B022B5B21D10046600C /* PieChartView.swift in Sources */,
 				66F6CF9D2B2E4917005D3CC5 /* ContentView.swift in Sources */,
 				666C60882B9CE82500ECD034 /* ImageAnalysisViewModel.swift in Sources */,
 				66F6CFB72B2E6608005D3CC5 /* InsightView.swift in Sources */,

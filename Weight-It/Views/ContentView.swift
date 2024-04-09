@@ -17,11 +17,12 @@ struct ContentView: View {
     var body: some View {
         TabView(selection: $selectedTabIndex){
             InsightView()
+                .navigationTitle("Insights")
                 .tabItem {
                     Text("Insights")
                     Image(systemName: "chart.pie")
                 }.tag(1)
-                
+                                
             
             ProductsView()
                 .tabItem {
