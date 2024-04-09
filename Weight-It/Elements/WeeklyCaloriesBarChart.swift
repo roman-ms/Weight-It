@@ -27,7 +27,6 @@ struct WeeklyCaloriesBarChart: View {
     }
     
     private func groupAndSumCaloriesByDayOfWeek() -> [(key: String, value: Int)] {
-        let calendar = Calendar.current
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEE" // Abbreviated day name, e.g., "Mon", "Tue", etc.
         
@@ -47,16 +46,42 @@ struct WeeklyCaloriesBarChart: View {
     }
 
     var body: some View {
-        Chart {
-            ForEach(groupAndSumCaloriesByDayOfWeek(), id: \.key) { dayOfWeek, totalCalories in
-                BarMark(
-                    x: .value("Day", dayOfWeek),
-                    y: .value("Calories", totalCalories)
-                )
-                .opacity(0.7)
-                .foregroundStyle(.blue)
+        let data = groupAndSumCaloriesByDayOfWeek()
+        
+        if data.isEmpty {
+            // Display "No Data" message for empty data
+            ZStack {
+                // Draw an empty grid or background if needed for aesthetics
+                Chart {
+                    // Example of creating an empty grid, you might adjust based on actual needs
+                    ForEach(["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], id: \.self) { day in
+                        BarMark(
+                            x: .value("Day", day),
+                            y: .value("Calories", 0)
+                        )
+                        .opacity(0)
+                    }
+                }
+                .padding()
+                
+                // Overlay "No Data" message on top of the chart/grid
+                Text("No Data")
+                    .foregroundColor(.gray)
+                    .font(.title)
             }
+        } else {
+            // Display chart with data
+            Chart {
+                ForEach(data, id: \.key) { dayOfWeek, totalCalories in
+                    BarMark(
+                        x: .value("Day", dayOfWeek),
+                        y: .value("Calories", totalCalories)
+                    )
+                    .opacity(0.7)
+                    .foregroundStyle(.blue)
+                }
+            }
+            .padding()
         }
-        .padding()
     }
 }
