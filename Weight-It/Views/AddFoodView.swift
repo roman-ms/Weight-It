@@ -77,6 +77,8 @@ struct AddFoodView: View {
                                                      carbs: nutritionModel.totalNutrients.CHOCDF.quantity,
                                                      fat: nutritionModel.totalNutrients.FAT.quantity,
                                                      protein: nutritionModel.totalNutrients.PROCNT.quantity,
+                                                     water: nutritionModel.totalNutrients.WATER.quantity,
+                                                     fiber: nutritionModel.totalNutrients.FIBTG.quantity,
                                                      context: managedObjContext)
                             dismiss()
                         }

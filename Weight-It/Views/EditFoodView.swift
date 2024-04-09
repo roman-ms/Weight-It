@@ -41,6 +41,8 @@ struct EditFoodView: View {
                                               carbs: food.carbs,
                                               fat: food.fat,
                                               protein: food.protein,
+                                              water: food.water,
+                                              fiber: food.fiber,
                                               context: managedObjContext)
                     dismiss()
                 }
