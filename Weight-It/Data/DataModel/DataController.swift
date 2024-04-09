@@ -36,6 +36,8 @@ class DataController: ObservableObject{
                  carbs: Double,
                  fat: Double,
                  protein: Double,
+                 water: Double,
+                 fiber: Double,
                  context: NSManagedObjectContext) {
         let food = Food(context: context)
         food.id = UUID()
@@ -46,6 +48,8 @@ class DataController: ObservableObject{
         food.carbs = carbs
         food.fat = fat
         food.protein = protein
+        food.water = water
+        food.fiber = fiber
         
         //use context to avoid repition of save function
         save(context: context)
@@ -58,6 +62,8 @@ class DataController: ObservableObject{
                   carbs: Double,
                   fat: Double,
                   protein: Double,
+                  water: Double,
+                  fiber: Double,
                   context: NSManagedObjectContext){
         food.date = Date()
         food.name = name
@@ -66,6 +72,8 @@ class DataController: ObservableObject{
         food.carbs = carbs
         food.fat = fat
         food.protein = protein
+        food.water = water
+        food.fiber = fiber
         
         //use context to avoid repition of save function
         save(context: context)
