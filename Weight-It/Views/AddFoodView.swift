@@ -6,6 +6,8 @@ struct AddFoodView: View {
     @State private var capturedImage: UIImage? = nil
     @State private var isCustomCameraViewPresented = false
     @State private var name = ""
+    @State private var ingr1 = ""
+    @State private var ingr2 = ""
     @State private var quantity: Double = 0
     @StateObject private var viewModel = ImageAnalysisViewModel()
     @State private var showNutritionView = false
@@ -32,6 +34,8 @@ struct AddFoodView: View {
                     CustomCameraView(capturedImage: $capturedImage)
                 })
             }
+            TextField("Ingredient", text: $ingr1)
+            TextField("Ingredient", text: $ingr2)
             HStack{
                 TextField("Quantity", value: $quantity, format: .number)
                 Text(" g") // Unit label
@@ -41,15 +45,43 @@ struct AddFoodView: View {
             Section {
                 if let nutritionModel = nutritionViewModel.nutritionModel {
                     ScrollView {
-                        VStack {
-                            Text("\(name)")
-                            Text("Energy (kcal): \(nutritionModel.totalNutrients.ENERC_KCAL.quantity, specifier: "%.2f") \(nutritionModel.totalNutrients.ENERC_KCAL.unit)")
-                            Text("Total Weight: \(nutritionModel.totalWeight, specifier: "%.2f") g")
-                            // Displaying nutrition information from the nested dictionary
-                            Text("Carbohydrate: \(nutritionModel.totalNutrients.CHOCDF.quantity) g")
-                            Text("Fat: \(nutritionModel.totalNutrients.FAT.quantity) g")
-                            Text("Protein: \(nutritionModel.totalNutrients.PROCNT.quantity) g")
+                        VStack(spacing: 10) { // Increase spacing between lines here, adjust the value as needed
+                            HStack {
+                                Text("Energy (kcal): ")
+                                    .bold() +
+                                Text("\(nutritionModel.totalNutrients.ENERC_KCAL.quantity, specifier: "%.2f") \(nutritionModel.totalNutrients.ENERC_KCAL.unit)")
+                                Spacer()
+                            }
+                            
+                            HStack {
+                                Text("Carbohydrate: ")
+                                    .bold() +
+                                Text("\(nutritionModel.totalNutrients.CHOCDF.quantity) g")
+                                Spacer()
+                            }
+                            
+                            HStack {
+                                Text("Fat: ")
+                                    .bold() +
+                                Text("\(nutritionModel.totalNutrients.FAT.quantity) g")
+                                Spacer()
+                            }
+                            
+                            HStack {
+                                Text("Protein: ")
+                                    .bold() +
+                                Text("\(nutritionModel.totalNutrients.PROCNT.quantity) g")
+                                Spacer()
+                            }
+                            
+                            HStack {
+                                Text("Fiber: ")
+                                    .bold() +
+                                Text("\(nutritionModel.totalNutrients.FIBTG.quantity) g")
+                                Spacer()
+                            }
                         }
+                        .multilineTextAlignment(.leading)
                     }
                 }
             }
@@ -59,7 +91,7 @@ struct AddFoodView: View {
                     Spacer()
                     Button("Analyze") {
                         showNutritionView = true // Trigger the sheet presentation
-                        let combinedString = "\(name) \(quantity) g"
+                        let combinedString = "\(ingr1) \(ingr2) \(name) \(quantity) g"
                         nutritionViewModel.loadNutritionData(for: combinedString)
                     }
                     Spacer()
@@ -96,17 +128,17 @@ struct AddFoodView: View {
             isLoading = false // Stop loading
         }
         .sheet(isPresented: $showNutritionView) {
-            let combinedString = "\(name) \(quantity) g"
+            let combinedString = "\(ingr1) \(ingr2) \(name) \(quantity) g"
             // Present the NutritionView here
             NutritionView(searchQuery: combinedString)
         }
         
         if isLoading { // Conditionally display the loading screen
-                        LoadingView() // This could be a custom view or a simple overlay
-                            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-                            .background(Color.black.opacity(0.45))
-                            .foregroundColor(Color.white)
-                    }
+            LoadingView() // This could be a custom view or a simple overlay
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                .background(Color.black.opacity(0.45))
+                .foregroundColor(Color.white)
+        }
     }
 }
 
