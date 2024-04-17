@@ -13,6 +13,8 @@ struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var items: [Item]
     @State private var selectedTabIndex = 2 // Assuming ProductsView is intended to be the default
+    
+    @ObservedObject private var bluetoothViewModel = BluetoothViewModel()
 
     var body: some View {
         TabView(selection: $selectedTabIndex){
@@ -36,6 +38,12 @@ struct ContentView: View {
                     Text("Settings")
                     Image(systemName: "gearshape")
                 }.tag(3)
+            
+            BluetoothView()
+                .tabItem {
+                    Text("Bluetooth")
+                    Image(systemName: "wifi")
+                }.tag(4)
         }
     }
 }
