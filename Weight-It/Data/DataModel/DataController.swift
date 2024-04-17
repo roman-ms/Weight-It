@@ -64,8 +64,9 @@ class DataController: ObservableObject{
                   protein: Double,
                   water: Double,
                   fiber: Double,
+                  date: Date,
                   context: NSManagedObjectContext){
-        food.date = Date()
+        food.date = date
         food.name = name
         food.quantity = quantity
         food.kcal = kcal
