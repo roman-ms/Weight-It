@@ -10,15 +10,29 @@ import SwiftData
 
 @main
 struct Weight_ItApp: App {
-    //inject data base
     @StateObject private var dataController = DataController()
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
-            //injetc into our app
-                .environment(\.managedObjectContext, dataController.container.viewContext)
-                .accentColor(Color(hex: "00000A"))
+            AccentColorAdjustingView {
+                ContentView()
+                    .environment(\.managedObjectContext, dataController.container.viewContext)
+            }
         }
     }
 }
+
+struct AccentColorAdjustingView<Content: View>: View {
+    @Environment(\.colorScheme) var colorScheme
+    let content: Content
+
+    init(@ViewBuilder content: () -> Content) {
+        self.content = content()
+    }
+
+    var body: some View {
+        content
+            .accentColor(colorScheme == .dark ? .white : .black) // Adjusts the accent color
+    }
+}
+
