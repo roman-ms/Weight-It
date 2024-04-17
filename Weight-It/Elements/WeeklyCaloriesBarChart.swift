@@ -77,7 +77,7 @@ struct WeeklyCaloriesBarChart: View {
                         y: .value("Calories", totalCalories)
                     )
                     .opacity(0.7)
-                    .foregroundStyle(Color(hex: "00000A"))
+                    .foregroundStyle(Color(hex: "0D8D60"))
                 }
                 // Add the RuleMark for the calories goal
                 RuleMark(
@@ -87,7 +87,7 @@ struct WeeklyCaloriesBarChart: View {
                 .foregroundStyle(.red) // Sets the color to red
             }
             .frame(height: 150)
-            .padding()
+            .padding(10)
         }
     }
 

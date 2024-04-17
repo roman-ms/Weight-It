@@ -22,8 +22,11 @@ struct SettingItemView: View {
 
             if type == "Text" {
                 Spacer()
+                // Modified TextField to push input to the right
                 TextField("", text: $userInput)
+                    .multilineTextAlignment(.trailing) // Align text to the right
                     .frame(width: 100)
+                    .padding(.leading, 10) // Optional: Adjust the padding as needed to align with your UI
                     .cornerRadius(5) // Optionally, add a corner radius for rounded corners
             }
             else if type == "Picker" {
@@ -77,15 +80,28 @@ struct SettingsView: View {
                                 type: "Picker",
                                 pickerOptions: ["None", "Male", "Female"],
                                 userInput: $userSettings.sexInput)
-                SettingItemView(title: "Age",
-                                type: "Text",
-                                userInput: $userSettings.ageInput)
-                SettingItemView(title: "Weight",
-                                type: "Text",
-                                userInput: $userSettings.weightInput)
-                SettingItemView(title: "Height",
-                                type: "Text",
-                                userInput: $userSettings.heightInput)
+                HStack{
+                    SettingItemView(title: "Age",
+                                    type: "Text",
+                                    userInput: $userSettings.ageInput)
+                    Text("y/o")
+                        .foregroundColor(.gray)
+                }
+                HStack{
+                    SettingItemView(title: "Weight",
+                                    type: "Text",
+                                    userInput: $userSettings.weightInput)
+                    Text("kg")
+                        .foregroundColor(.gray)
+                }
+                
+                HStack{
+                    SettingItemView(title: "Height",
+                                    type: "Text",
+                                    userInput: $userSettings.heightInput)
+                    Text("cm")
+                        .foregroundColor(.gray)
+                }
                 SettingItemView(title: "Goals",
                                 type: "Picker",
                                 pickerOptions: ["None", "Lose", "Maintain", "Gain"],

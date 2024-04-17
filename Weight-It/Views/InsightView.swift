@@ -25,7 +25,7 @@ struct InsightView: View {
             }
             
             Section(header: Text("Today")) {
-                SectorChart(products: sumNutrientsForToday())
+                HorizontalBarChartView(nutrients: sumNutrientsForToday())
             }
         }
     }

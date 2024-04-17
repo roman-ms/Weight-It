@@ -3,7 +3,7 @@ import SwiftUI
 
 struct NutritionView: View {
     @StateObject private var viewModel = NutritionViewModel()
-    var searchQuery: String // Variable to hold the classification result
+    var searchQuery: String
 
     var body: some View {
         VStack {

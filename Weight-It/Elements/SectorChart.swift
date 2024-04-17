@@ -23,11 +23,10 @@ struct SectorChart: View {
         Product(title: "Carbs", revenue: 200),
         Product(title: "Fat", revenue: 300),
         Product(title: "Fiber", revenue: 400),
-        Product(title: "Wate", revenue: 500)
     ]
     
     // A predefined set of colors for the chart elements
-    private let chartColors: [Color] = [Color(hex: "00000A"), Color(hex: "F63A24"), Color(hex: "0D8D60"), Color(hex: "FFCF00"), Color(hex: "0562AE"), Color(hex: "046A54")]
+    private let chartColors: [Color] = [Color(hex: "6E3421"), Color(hex: "F63A24"),Color(hex: "FFCF00"), Color(hex: "0D8D60"), Color(hex: "046A54"), Color(hex: "0562AE")]
     
     // No need for a default products array inside the struct
     
@@ -61,13 +60,14 @@ struct SectorChart: View {
                 }
                 .padding(.trailing, 20)
             }
+            .padding(10)
             .frame(height: 150)
             .blur(radius: 10)
             .overlay(
                 Text("No Data")
+                    .foregroundColor(.gray)
                     .font(.title), // Adjust font as needed
-                alignment: .center // Overlay the text in the center of the blurred content
-            )
+                    alignment: .center) // Overlay the text in the center of the blurred content
         } else {
             HStack {
                 // Chart
@@ -98,7 +98,7 @@ struct SectorChart: View {
                 }
                 .padding(.trailing, 20)
             }
-            .frame(height: 150)
+            .frame(height: 145)
         }
     }
 }
