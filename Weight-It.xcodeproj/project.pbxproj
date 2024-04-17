@@ -12,6 +12,7 @@
 		6604351D2B8D07F200B97F17 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660435192B8D07F200B97F17 /* NetworkManager.swift */; };
 		6604351E2B8D07F200B97F17 /* NutritionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6604351A2B8D07F200B97F17 /* NutritionViewModel.swift */; };
 		661EC9B22BC4A8E7000AC111 /* NutrientsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661EC9B12BC4A8E7000AC111 /* NutrientsViewModel.swift */; };
+		662716E62BD0674B00F404AE /* FoodModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 662716E42BD0674B00F404AE /* FoodModel.xcdatamodeld */; };
 		663EB04D2B3C0FD100B2DE5C /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663EB04C2B3C0FD100B2DE5C /* CameraService.swift */; };
 		663EB04F2B3CDC3E00B2DE5C /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663EB04E2B3CDC3E00B2DE5C /* CameraView.swift */; };
 		663EB0532B3CE39D00B2DE5C /* CustomCameraVeiw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663EB0522B3CE39D00B2DE5C /* CustomCameraVeiw.swift */; };
@@ -32,7 +33,6 @@
 		66D928B22B71D120005BD0E8 /* ViewControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D928B12B71D120005BD0E8 /* ViewControllerWrapper.swift */; };
 		66D928B42B71D12E005BD0E8 /* ClassificationResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D928B32B71D12E005BD0E8 /* ClassificationResults.swift */; };
 		66DCD8742B4719AA00B90E4D /* CalBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DCD8732B4719AA00B90E4D /* CalBar.swift */; };
-		66E9D5FE2B9A4C8D0005B97B /* FoodModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 66E9D5FB2B9A4C8D0005B97B /* FoodModel.xcdatamodeld */; };
 		66E9D5FF2B9A4C8D0005B97B /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E9D5FD2B9A4C8D0005B97B /* DataController.swift */; };
 		66F6CF9B2B2E4917005D3CC5 /* Weight_ItApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6CF9A2B2E4917005D3CC5 /* Weight_ItApp.swift */; };
 		66F6CF9D2B2E4917005D3CC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6CF9C2B2E4917005D3CC5 /* ContentView.swift */; };
@@ -49,6 +49,7 @@
 		660435192B8D07F200B97F17 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		6604351A2B8D07F200B97F17 /* NutritionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NutritionViewModel.swift; sourceTree = "<group>"; };
 		661EC9B12BC4A8E7000AC111 /* NutrientsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrientsViewModel.swift; sourceTree = "<group>"; };
+		662716E52BD0674B00F404AE /* FoodModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodModel.xcdatamodel; sourceTree = "<group>"; };
 		663EB04C2B3C0FD100B2DE5C /* CameraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
 		663EB04E2B3CDC3E00B2DE5C /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		663EB0522B3CE39D00B2DE5C /* CustomCameraVeiw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraVeiw.swift; sourceTree = "<group>"; };
@@ -69,7 +70,6 @@
 		66D928B12B71D120005BD0E8 /* ViewControllerWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerWrapper.swift; sourceTree = "<group>"; };
 		66D928B32B71D12E005BD0E8 /* ClassificationResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassificationResults.swift; sourceTree = "<group>"; };
 		66DCD8732B4719AA00B90E4D /* CalBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalBar.swift; sourceTree = "<group>"; };
-		66E9D5FC2B9A4C8D0005B97B /* FoodModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodModel.xcdatamodel; sourceTree = "<group>"; };
 		66E9D5FD2B9A4C8D0005B97B /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		66F6CF972B2E4917005D3CC5 /* Weight-It.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weight-It.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F6CF9A2B2E4917005D3CC5 /* Weight_ItApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weight_ItApp.swift; sourceTree = "<group>"; };
@@ -154,7 +154,7 @@
 			children = (
 				66E9D5FD2B9A4C8D0005B97B /* DataController.swift */,
 				661EC9B12BC4A8E7000AC111 /* NutrientsViewModel.swift */,
-				66E9D5FB2B9A4C8D0005B97B /* FoodModel.xcdatamodeld */,
+				662716E42BD0674B00F404AE /* FoodModel.xcdatamodeld */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -306,6 +306,7 @@
 				6654A9BB2BC6F17F003CF759 /* HorizontalBarChart.swift in Sources */,
 				664F7FF62B9A530F0011F573 /* TimeFormatting.swift in Sources */,
 				66B344B62BBF45BB001B8F1C /* SectorChart.swift in Sources */,
+				662716E62BD0674B00F404AE /* FoodModel.xcdatamodeld in Sources */,
 				663EB0532B3CE39D00B2DE5C /* CustomCameraVeiw.swift in Sources */,
 				66D928B22B71D120005BD0E8 /* ViewControllerWrapper.swift in Sources */,
 				6604351E2B8D07F200B97F17 /* NutritionViewModel.swift in Sources */,
@@ -318,7 +319,6 @@
 				66E9D5FF2B9A4C8D0005B97B /* DataController.swift in Sources */,
 				66F6CF9F2B2E4917005D3CC5 /* Item.swift in Sources */,
 				6645B28F2BBF496600D0A049 /* WeeklyCaloriesBarChart.swift in Sources */,
-				66E9D5FE2B9A4C8D0005B97B /* FoodModel.xcdatamodeld in Sources */,
 				66AE548C2B978ECC00C73F4F /* UserSettings.swift in Sources */,
 				6604351D2B8D07F200B97F17 /* NetworkManager.swift in Sources */,
 				66FD8B782BBDECB400D39108 /* SettingsView.swift in Sources */,
@@ -542,14 +542,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		66E9D5FB2B9A4C8D0005B97B /* FoodModel.xcdatamodeld */ = {
+		662716E42BD0674B00F404AE /* FoodModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				66E9D5FC2B9A4C8D0005B97B /* FoodModel.xcdatamodel */,
+				662716E52BD0674B00F404AE /* FoodModel.xcdatamodel */,
 			);
-			currentVersion = 66E9D5FC2B9A4C8D0005B97B /* FoodModel.xcdatamodel */;
+			currentVersion = 662716E52BD0674B00F404AE /* FoodModel.xcdatamodel */;
 			name = FoodModel.xcdatamodeld;
-			path = "/Users/mshkvroman/Desktop/Projects/Weight-It/Weight-It/Weight-It/Data/DataModel/FoodModel.xcdatamodeld";
+			path = "/Users/mshkvroman/Desktop/Projects/Weight-It/Weight-It/Data/FoodModel.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
