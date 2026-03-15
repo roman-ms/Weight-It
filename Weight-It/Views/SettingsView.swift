@@ -109,11 +109,11 @@ struct SettingsView: View {
                 SettingItemView(title: "Measurement Units",
                                 type: "Picker",
                                 pickerOptions: ["Kg/Cm", "lbs/inch"],
-                                userInput: $userSettings.unitsInput)
+                                userInput: $userSettings.wunitsInput)
                 SettingItemView(title: "Time Units",
                                 type: "Picker",
                                 pickerOptions: ["12 hr", "24 hr"],
-                                userInput: $userSettings.unitsInput) // This might need a separate binding for time units.
+                                userInput: $userSettings.tunitsInput)
             }
             .padding()
             Spacer()
