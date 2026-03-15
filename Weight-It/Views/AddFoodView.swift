@@ -103,7 +103,7 @@ struct AddFoodView: View {
                     Spacer()
                     Button("Submit") {
                         if let nutritionModel = nutritionViewModel.nutritionModel {
-                            DataController().addFood(name: name,
+                            DataController.addFood(name: name,
                                                      quantity: quantity,
                                                      kcal: nutritionModel.totalNutrients.ENERC_KCAL.quantity,
                                                      carbs: nutritionModel.totalNutrients.CHOCDF.quantity,

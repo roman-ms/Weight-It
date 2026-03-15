@@ -23,14 +23,17 @@ extension BluetoothViewModel: CBCentralManagerDelegate {
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         if central.state == .poweredOn {
             self.centralManager?.scanForPeripherals(withServices: nil)
+            // Stop scanning after 10 seconds to preserve battery
+            DispatchQueue.main.asyncAfter(deadline: .now() + 10) { [weak self] in
+                self?.centralManager?.stopScan()
+            }
         }
     }
 
-    func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
+    func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String: Any], rssi RSSI: NSNumber) {
         if !peripherals.contains(peripheral) {
             peripherals.append(peripheral)
-            print("AdvertisementData: \(advertisementData)")
-            let name = peripheral.name ?? advertisementData[CBAdvertisementDataLocalNameKey] as? String ?? "unnamed device"
+            let name = peripheral.name ?? advertisementData[CBAdvertisementDataLocalNameKey] as? String ?? "Unnamed Device"
             peripheralNames.append(name)
         }
     }

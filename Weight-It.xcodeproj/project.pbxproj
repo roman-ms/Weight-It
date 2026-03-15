@@ -565,7 +565,7 @@
 			);
 			currentVersion = 662716E52BD0674B00F404AE /* FoodModel.xcdatamodel */;
 			name = FoodModel.xcdatamodeld;
-			path = "/Users/mshkvroman/Desktop/Projects/Weight-It/Weight-It/Data/FoodModel.xcdatamodeld";
+			path = FoodModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

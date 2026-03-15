@@ -69,7 +69,7 @@ class UserSettings: ObservableObject {
     
     @Published var lunchboxInput: Bool {
         didSet {
-            UserDefaults.standard.set(notificationsInput, forKey: "notificationsInput")
+            UserDefaults.standard.set(lunchboxInput, forKey: "lunchboxinput")
         }
     }
 

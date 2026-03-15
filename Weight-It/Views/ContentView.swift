@@ -6,50 +6,39 @@
 //
 
 import SwiftUI
-import SwiftData
-
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
-    @State private var selectedTabIndex = 2 // Assuming ProductsView is intended to be the default
-    
-    @ObservedObject private var bluetoothViewModel = BluetoothViewModel()
+    @State private var selectedTabIndex = 2
 
     var body: some View {
-        TabView(selection: $selectedTabIndex){
+        TabView(selection: $selectedTabIndex) {
             InsightView()
-                .navigationTitle("Insights")
                 .tabItem {
                     Text("Insights")
                     Image(systemName: "chart.pie")
                 }.tag(1)
-                                
-            
+
             ProductsView()
                 .tabItem {
                     Text("Home")
                     Image(systemName: "house.fill")
-                  }.tag(2) // This tag matches the initial state, making ProductsView the default
-                
-            
+                }.tag(2)
+
             SettingsView()
                 .tabItem {
                     Text("Settings")
                     Image(systemName: "gearshape")
                 }.tag(3)
-            
+
             BluetoothView()
                 .tabItem {
                     Text("Bluetooth")
-                    Image(systemName: "wifi")
+                    Image(systemName: "dot.radiowaves.left.and.right")
                 }.tag(4)
         }
     }
 }
 
-
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
 }

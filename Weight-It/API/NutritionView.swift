@@ -18,7 +18,7 @@ struct NutritionView: View {
                             Product(title: "Protein", revenue: nutritionModel.totalNutrients.PROCNT.quantity),
                             Product(title: "Carbs", revenue: nutritionModel.totalNutrients.CHOCDF.quantity),
                             Product(title: "Fat", revenue: nutritionModel.totalNutrients.FAT.quantity),
-                            Product(title: "Fiber", revenue: nutritionModel.totalNutrients.PROCNT.quantity),
+                            Product(title: "Fiber", revenue: nutritionModel.totalNutrients.FIBTG.quantity),
                         ])
 
                         VStack(spacing: 10) { // Increase spacing between lines here, adjust the value as needed

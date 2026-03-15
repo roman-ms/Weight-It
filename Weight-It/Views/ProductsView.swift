@@ -10,31 +10,27 @@ import CoreData
 
 struct ProductsView: View {
     @Environment(\.managedObjectContext) var managedObjContext
-    //Get data from DB, sord descriptod defines in waht order we fetch the data, returns an array
     @FetchRequest(sortDescriptors: [SortDescriptor(\.date, order: .reverse)]) var food: FetchedResults<Food>
-    //add view showing variable
     @State private var showingAddView = false
-    
+
     var body: some View {
-        NavigationView{
-            VStack(alignment: .leading){
+        NavigationStack {
+            VStack(alignment: .leading) {
                 Text("\(Int(totalCaloriesToday())) Kcal (Today)")
                     .foregroundColor(.gray)
                     .padding(.horizontal)
                 List {
                     ForEach(food) { food in
                         NavigationLink(destination: EditFoodView(food: food)) {
-                            HStack{
+                            HStack {
                                 VStack(alignment: .leading, spacing: 6) {
-                                    Text(food.name!)
+                                    Text(food.name ?? "Unknown")
                                         .bold()
-                                    
                                     Text("\(Int(food.quantity)) g")
                                         .foregroundColor(.gray)
                                 }
-                                //Pushes rest fo the elements all th way to the right
                                 Spacer()
-                                Text(calcTimeSince(date:food.date!))
+                                Text(calcTimeSince(date: food.date ?? Date()))
                                     .foregroundColor(.gray)
                                     .italic()
                             }
@@ -42,11 +38,10 @@ struct ProductsView: View {
                     }
                     .onDelete(perform: deleteFood)
                 }
-                //So list style covers all the screen
                 .listStyle(.plain)
             }
             .navigationTitle("Food")
-            .toolbar{
+            .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink {
                         AddFoodView()
@@ -59,32 +54,22 @@ struct ProductsView: View {
                 }
             }
         }
-        .navigationViewStyle(.stack)
     }
-    
-    //
-    private func deleteFood(offset: IndexSet){
-        withAnimation{
-            //map the food to teh current position
+
+    private func deleteFood(offset: IndexSet) {
+        withAnimation {
             offset.map { food[$0] }.forEach(managedObjContext.delete)
-            
-            //save delition
-            DataController().save(context: managedObjContext)
+            DataController.save(context: managedObjContext)
         }
     }
-    
-    private func totalCaloriesToday() -> Double{
-        var caloriesToday: Double = 0
-        for item in food {
-            if Calendar.current.isDateInToday(item.date!){
-                caloriesToday += item.kcal
-            }
+
+    private func totalCaloriesToday() -> Double {
+        food.reduce(0.0) { total, item in
+            guard let date = item.date, Calendar.current.isDateInToday(date) else { return total }
+            return total + item.kcal
         }
-        
-        return caloriesToday
     }
 }
-
 
 #Preview {
     ProductsView()

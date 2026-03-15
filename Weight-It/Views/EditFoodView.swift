@@ -34,7 +34,7 @@ struct EditFoodView: View {
             HStack {
                 Spacer()
                 Button("Submit") {
-                    DataController().editFood(food: food, name: name,
+                    DataController.editFood(food: food, name: name,
                                               quantity: quantity,
                                               kcal: Double(kcal),
                                               carbs: Double(carbs),
