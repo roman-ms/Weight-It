@@ -23,8 +23,7 @@
 		664F7FF62B9A530F0011F573 /* TimeFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664F7FF52B9A530F0011F573 /* TimeFormatting.swift */; };
 		6654A9BB2BC6F17F003CF759 /* HorizontalBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6654A9BA2BC6F17F003CF759 /* HorizontalBarChart.swift */; };
 		665E7BCC2B4764BE00B70576 /* GalleryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665E7BCB2B4764BE00B70576 /* GalleryButton.swift */; };
-		666C48E12BD0766100AA263B /* BluetoothModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666C48E02BD0766100AA263B /* BluetoothModel.swift */; };
-		666C48E42BD0846400AA263B /* BluetoothView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666C48E32BD0846400AA263B /* BluetoothView.swift */; };
+
 		666C60882B9CE82500ECD034 /* ImageAnalysisViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666C60872B9CE82500ECD034 /* ImageAnalysisViewModel.swift */; };
 		666FA8FD2B58D69300AD1F61 /* AnaliseFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666FA8FC2B58D69300AD1F61 /* AnaliseFood.swift */; };
 		668D267F2B4C82DD0063504D /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668D267E2B4C82DD0063504D /* Style.swift */; };
@@ -64,8 +63,7 @@
 		664F7FF52B9A530F0011F573 /* TimeFormatting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeFormatting.swift; sourceTree = "<group>"; };
 		6654A9BA2BC6F17F003CF759 /* HorizontalBarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalBarChart.swift; sourceTree = "<group>"; };
 		665E7BCB2B4764BE00B70576 /* GalleryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryButton.swift; sourceTree = "<group>"; };
-		666C48E02BD0766100AA263B /* BluetoothModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothModel.swift; sourceTree = "<group>"; };
-		666C48E32BD0846400AA263B /* BluetoothView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothView.swift; sourceTree = "<group>"; };
+
 		666C60872B9CE82500ECD034 /* ImageAnalysisViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAnalysisViewModel.swift; sourceTree = "<group>"; };
 		666FA8FC2B58D69300AD1F61 /* AnaliseFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnaliseFood.swift; sourceTree = "<group>"; };
 		668D267E2B4C82DD0063504D /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
@@ -123,15 +121,7 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		666C48E22BD076AA00AA263B /* Blutooth */ = {
-			isa = PBXGroup;
-			children = (
-				666C48E32BD0846400AA263B /* BluetoothView.swift */,
-				666C48E02BD0766100AA263B /* BluetoothModel.swift */,
-			);
-			path = Blutooth;
-			sourceTree = "<group>";
-		};
+
 		668FC7B22B5F2F2800DDCB79 /* Elements */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,7 +223,6 @@
 				66F2B7D62B4C70A500DB45B7 /* App */,
 				668FC7B22B5F2F2800DDCB79 /* Elements */,
 				66F2B7D82B4C70CD00DB45B7 /* Scripts */,
-				666C48E22BD076AA00AA263B /* Blutooth */,
 			);
 			path = "Weight-It";
 			sourceTree = "<group>";
@@ -330,9 +319,7 @@
 				6604351E2B8D07F200B97F17 /* NutritionViewModel.swift in Sources */,
 				6604351C2B8D07F200B97F17 /* NutritionView.swift in Sources */,
 				661EC9B22BC4A8E7000AC111 /* NutrientsViewModel.swift in Sources */,
-				666C48E12BD0766100AA263B /* BluetoothModel.swift in Sources */,
 				666FA8FD2B58D69300AD1F61 /* AnaliseFood.swift in Sources */,
-				666C48E42BD0846400AA263B /* BluetoothView.swift in Sources */,
 				66D928AE2B71CD4B005BD0E8 /* SeeFood.mlpackage in Sources */,
 				664F7FF32B9A52F70011F573 /* EditFoodView.swift in Sources */,
 				665E7BCC2B4764BE00B70576 /* GalleryButton.swift in Sources */,

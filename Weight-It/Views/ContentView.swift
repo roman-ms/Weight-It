@@ -30,11 +30,7 @@ struct ContentView: View {
                     Image(systemName: "gearshape")
                 }.tag(3)
 
-            BluetoothView()
-                .tabItem {
-                    Text("Bluetooth")
-                    Image(systemName: "dot.radiowaves.left.and.right")
-                }.tag(4)
+
         }
     }
 }
