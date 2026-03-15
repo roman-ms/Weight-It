@@ -10,11 +10,18 @@ import Foundation
 struct NetworkManager {
     static let shared = NetworkManager()
     
+    private var appId: String {
+        Bundle.main.infoDictionary?["EdamamAppId"] as? String ?? ""
+    }
+    private var appKey: String {
+        Bundle.main.infoDictionary?["EdamamAppKey"] as? String ?? ""
+    }
+
     func fetchNutritionData(for ingredient: String, completion: @escaping (Result<NutritionModel, Error>) -> Void) {
         var urlComponents = URLComponents(string: "https://api.edamam.com/api/nutrition-data")!
         urlComponents.queryItems = [
-            URLQueryItem(name: "app_id", value: "7d4d9421"),
-            URLQueryItem(name: "app_key", value: "11bf777843956c24d4192ca534661441"),
+            URLQueryItem(name: "app_id", value: appId),
+            URLQueryItem(name: "app_key", value: appKey),
             URLQueryItem(name: "nutrition-type", value: "logging"),
             URLQueryItem(name: "ingr", value: ingredient)
         ]

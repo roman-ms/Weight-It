@@ -47,7 +47,7 @@ struct WeeklyCaloriesBarChart: View {
 
     var body: some View {
         let data = groupAndSumCaloriesByDayOfWeek()
-        let caloriesGoal = 1500 // Example calories goal
+        let caloriesGoal = Int(UserSettings.shared.tdee)
         
         if data.isEmpty {
             // Display "No Data" message for empty data

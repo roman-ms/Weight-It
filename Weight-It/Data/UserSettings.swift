@@ -73,6 +73,34 @@ class UserSettings: ObservableObject {
         }
     }
 
+    /// TDEE using Mifflin-St Jeor BMR × activity multiplier.
+    /// Returns 2000 as a safe default if profile data is missing or unparseable.
+    var tdee: Double {
+        guard
+            let weight = Double(weightInput),
+            let height = Double(heightInput),
+            let age = Double(ageInput)
+        else { return 2000 }
+
+        // Mifflin-St Jeor BMR
+        let bmr: Double
+        if sexInput == "Female" {
+            bmr = 10 * weight + 6.25 * height - 5 * age - 161
+        } else {
+            bmr = 10 * weight + 6.25 * height - 5 * age + 5
+        }
+
+        let multiplier: Double
+        switch lifestyleInput {
+        case "Sedentary":  multiplier = 1.2
+        case "Moderate":   multiplier = 1.55
+        case "Active":     multiplier = 1.725
+        default:           multiplier = 1.2
+        }
+
+        return bmr * multiplier
+    }
+
     init() {
         self.sexInput = UserDefaults.standard.object(forKey: "sexInput") as? String ?? "Male"
         self.weightInput = UserDefaults.standard.object(forKey: "weightInput") as? String ?? "92"

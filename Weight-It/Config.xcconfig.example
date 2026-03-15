@@ -1,0 +1,8 @@
+// Config.xcconfig.example — copy this to Config.xcconfig and fill in your keys.
+// Get credentials at https://developer.edamam.com/
+
+EDAMAM_APP_ID = your_app_id_here
+EDAMAM_APP_KEY = your_app_key_here
+
+INFOPLIST_KEY_EdamamAppId = $(EDAMAM_APP_ID)
+INFOPLIST_KEY_EdamamAppKey = $(EDAMAM_APP_KEY)
